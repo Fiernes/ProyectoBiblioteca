@@ -7,10 +7,6 @@ class Multa {
     private $resumen;
     private $pagada;
     
-    public function __construct() {
-        
-    }
-
     public function __constructFull($idMulta, $monto, $fechaMulta, $resumen, $pagada) {
         $this->idMulta = $idMulta;
         $this->monto = $monto;

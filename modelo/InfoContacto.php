@@ -7,9 +7,6 @@ class InfoContacto {
     private $telefonoPersonal;
     private $telefonoPersonalDos;
     
-    public function __construct(){
-        
-    }
     public function __constructFull($idPersona, $correoElectronico, $telefonoCasa, $telefonoPersonal, $telefonoPersonalDos) {
         $this->idPersona = $idPersona;
         $this->correoElectronico = $correoElectronico;

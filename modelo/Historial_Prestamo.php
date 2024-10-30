@@ -9,10 +9,6 @@ class Historial_Prestamo {
     private $idLibro;
     private $idMulta;
     
-    public function __construct(){
-        
-    }
-    
     public function __constructFull($idPrestamo, $fechaPrestamo, $fechaDevolucion, $estado, $idEstudiante, $idLibro, $idMulta) {
         $this->idPrestamo = $idPrestamo;
         $this->fechaPrestamo = $fechaPrestamo;

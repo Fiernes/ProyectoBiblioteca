@@ -5,10 +5,6 @@ class Rol {
   private $nombreRolUno;
   private $nombreRolDos;
   
-  public function __construct() {
-      
-  }
-
   public function __constructFull($idRol, $nombreRolUno, $nombreRolDos) {
       $this->idRol = $idRol;
       $this->nombreRolUno = $nombreRolUno;

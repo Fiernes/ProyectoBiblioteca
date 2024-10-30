@@ -6,7 +6,7 @@ class Conexion {
     // Constructor para la conexión a la base de datos usando mysqli
     public function __construct() {
         $host = "localhost"; // Servidor de la base de datos
-        $db = "mi_base_datos"; // Nombre de la base de datos
+        $db = "db_biblioteca"; // Nombre de la base de datos
         $user = "root"; // Usuario de la base de datos
         $pass = ""; // Contraseña de la base de datos
 

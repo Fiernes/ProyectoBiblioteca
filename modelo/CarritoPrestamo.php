@@ -3,12 +3,7 @@ class CarritoPrestamo {
     private $idCarrito;
     private $cantidadLibros;
     private $idEstudiante;
-    
-    public function __construct() {
-        
-    }
-    
-    public function __constructFull($idCarrito, $cantidadLibros, $idEstudiante) {
+    public function __construct($idCarrito, $cantidadLibros, $idEstudiante) {
         $this->idCarrito = $idCarrito;
         $this->cantidadLibros = $cantidadLibros;
         $this->idEstudiante = $idEstudiante;

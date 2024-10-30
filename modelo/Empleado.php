@@ -8,11 +8,7 @@ class Empleado {
     private $horarioLaboral;
     private $idPersona;
     
-    public function __construct() {
-        
-    }
-    
-    public function __constructFull($idEmpleado, $tipoEmpleado, $puesto, $departamento, $horarioLaboral, $idPersona){
+    public function __construct($idEmpleado, $tipoEmpleado, $puesto, $departamento, $horarioLaboral, $idPersona){
         $this->idEmpleado = $idEmpleado;
         $this->tipoEmpleado = $tipoEmpleado;
         $this->puesto = $puesto;

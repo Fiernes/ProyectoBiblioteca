@@ -1,24 +1,21 @@
 <?php
 
 class Direccion {
+
     private $idPersona;
     private $departamento;
     private $ciudad;
     private $colonia;
     private $numeroCasa;
-    
-    public function __construct() {
-        
-    }
-    
-    public function __constructFull($idPersona, $departamento, $ciudad, $colonia, $numeroCasa){
+
+    public function __construct($idPersona, $departamento, $ciudad, $colonia, $numeroCasa) {
         $this->idPersona = $idPersona;
         $this->departamento = $departamento;
         $this->ciudad = $ciudad;
         $this->colonia = $colonia;
         $this->numeroCasa = $numeroCasa;
     }
-    
+
     public function getIdPersona() {
         return $this->idPersona;
     }
@@ -58,4 +55,5 @@ class Direccion {
     public function setNumeroCasa($numeroCasa): void {
         $this->numeroCasa = $numeroCasa;
     }
+
 }

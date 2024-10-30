@@ -4,11 +4,7 @@ class Carrito_Libros {
     private $idCarrito;
     private $idLibro;
     
-    public function __construct() {
-        
-    }
-    
-    public function __constructFull($idCarrito, $idLibro) {
+    public function __construct($idCarrito, $idLibro) {
         $this->idCarrito = $idCarrito;
         $this->idLibro = $idLibro;
     }

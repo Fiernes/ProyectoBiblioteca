@@ -8,10 +8,6 @@ class Logs {
     private $idPersona;
     private $detalleAccion;
     
-    public function __construct() {
-        
-    }
-
     public function __constructFull($idLog, $accion, $fecha, $idPersona, $detalleAccion) {
         $this->idLog = $idLog;
         $this->accion = $accion;

@@ -10,11 +10,7 @@ class Persona {
     private $segundoApellido;
     private $DNI;
     
-    public function __construct() {
-        
-    }
-    
-    public function __constructFull($idPersona, $usuario, $password, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $DNI) {
+    public function __construct($idPersona, $usuario, $password, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $DNI) {
         $this->idPersona = $idPersona;
         $this->usuario = $usuario;
         $this->password = $password;
