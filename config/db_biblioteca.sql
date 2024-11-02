@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-10-2024 a las 01:51:09
+-- Tiempo de generación: 02-11-2024 a las 21:02:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -24,24 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `carritoprestamo`
---
-
-CREATE TABLE `carritoprestamo` (
-  `idCarrito` int(11) NOT NULL,
-  `cantidaLibros` int(11) DEFAULT NULL,
-  `idEstudiante` varchar(12) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `carrito_libros`
 --
 
 CREATE TABLE `carrito_libros` (
   `idCarrito` int(11) NOT NULL,
   `idLibro` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carrito_prestamo`
+--
+
+CREATE TABLE `carrito_prestamo` (
+  `idCarrito` int(11) NOT NULL,
+  `cantidaLibros` int(11) DEFAULT NULL,
+  `idEstudiante` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -115,10 +115,10 @@ CREATE TABLE `historial_prestamo` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `infocontacto`
+-- Estructura de tabla para la tabla `info_contacto`
 --
 
-CREATE TABLE `infocontacto` (
+CREATE TABLE `info_contacto` (
   `idPersona` int(11) NOT NULL,
   `correoElectronico` varchar(50) DEFAULT NULL,
   `telefonoCasa` varchar(50) DEFAULT NULL,
@@ -129,10 +129,10 @@ CREATE TABLE `infocontacto` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `libro`
+-- Estructura de tabla para la tabla `libros`
 --
 
-CREATE TABLE `libro` (
+CREATE TABLE `libros` (
   `idLibro` int(11) NOT NULL,
   `titulo` varchar(50) DEFAULT NULL,
   `autor` varchar(50) DEFAULT NULL,
@@ -159,10 +159,10 @@ CREATE TABLE `logs` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `multa`
+-- Estructura de tabla para la tabla `multas`
 --
 
-CREATE TABLE `multa` (
+CREATE TABLE `multas` (
   `idMulta` int(11) NOT NULL,
   `monto` double DEFAULT NULL,
   `fechaMulta` date DEFAULT NULL,
@@ -190,10 +190,10 @@ CREATE TABLE `persona` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `rol`
+-- Estructura de tabla para la tabla `roles`
 --
 
-CREATE TABLE `rol` (
+CREATE TABLE `roles` (
   `idRol` int(11) NOT NULL,
   `nombreRolUno` varchar(50) DEFAULT NULL,
   `nombreRolDos` varchar(50) DEFAULT NULL
@@ -204,17 +204,17 @@ CREATE TABLE `rol` (
 --
 
 --
--- Indices de la tabla `carritoprestamo`
---
-ALTER TABLE `carritoprestamo`
-  ADD PRIMARY KEY (`idCarrito`);
-
---
 -- Indices de la tabla `carrito_libros`
 --
 ALTER TABLE `carrito_libros`
   ADD PRIMARY KEY (`idCarrito`),
   ADD KEY `Carrito_Libros_idLibro_fk` (`idLibro`);
+
+--
+-- Indices de la tabla `carrito_prestamo`
+--
+ALTER TABLE `carrito_prestamo`
+  ADD PRIMARY KEY (`idCarrito`);
 
 --
 -- Indices de la tabla `direccion`
@@ -253,15 +253,15 @@ ALTER TABLE `historial_prestamo`
   ADD KEY `Historial_Prestamo_idLibro_fk` (`idLibro`);
 
 --
--- Indices de la tabla `infocontacto`
+-- Indices de la tabla `info_contacto`
 --
-ALTER TABLE `infocontacto`
+ALTER TABLE `info_contacto`
   ADD PRIMARY KEY (`idPersona`);
 
 --
--- Indices de la tabla `libro`
+-- Indices de la tabla `libros`
 --
-ALTER TABLE `libro`
+ALTER TABLE `libros`
   ADD PRIMARY KEY (`idLibro`);
 
 --
@@ -272,9 +272,9 @@ ALTER TABLE `logs`
   ADD KEY `Logs_idPersona_fk` (`idPersona`);
 
 --
--- Indices de la tabla `multa`
+-- Indices de la tabla `multas`
 --
-ALTER TABLE `multa`
+ALTER TABLE `multas`
   ADD PRIMARY KEY (`idMulta`);
 
 --
@@ -284,9 +284,9 @@ ALTER TABLE `persona`
   ADD PRIMARY KEY (`idPersona`);
 
 --
--- Indices de la tabla `rol`
+-- Indices de la tabla `roles`
 --
-ALTER TABLE `rol`
+ALTER TABLE `roles`
   ADD PRIMARY KEY (`idRol`);
 
 --
@@ -294,16 +294,16 @@ ALTER TABLE `rol`
 --
 
 --
--- Filtros para la tabla `carritoprestamo`
---
-ALTER TABLE `carritoprestamo`
-  ADD CONSTRAINT `CarritoPrestamo_idCarrito_fk` FOREIGN KEY (`idCarrito`) REFERENCES `carrito_libros` (`idCarrito`);
-
---
 -- Filtros para la tabla `carrito_libros`
 --
 ALTER TABLE `carrito_libros`
-  ADD CONSTRAINT `Carrito_Libros_idLibro_fk` FOREIGN KEY (`idLibro`) REFERENCES `libro` (`idLibro`);
+  ADD CONSTRAINT `Carrito_Libros_idLibro_fk` FOREIGN KEY (`idLibro`) REFERENCES `libros` (`idLibro`);
+
+--
+-- Filtros para la tabla `carrito_prestamo`
+--
+ALTER TABLE `carrito_prestamo`
+  ADD CONSTRAINT `CarritoPrestamo_idCarrito_fk` FOREIGN KEY (`idCarrito`) REFERENCES `carrito_libros` (`idCarrito`);
 
 --
 -- Filtros para la tabla `direccion`
@@ -321,7 +321,7 @@ ALTER TABLE `empleado`
 -- Filtros para la tabla `empleado_rol`
 --
 ALTER TABLE `empleado_rol`
-  ADD CONSTRAINT `Empleado_Rol_idRol_fk` FOREIGN KEY (`idRol`) REFERENCES `rol` (`idRol`);
+  ADD CONSTRAINT `Empleado_Rol_idRol_fk` FOREIGN KEY (`idRol`) REFERENCES `roles` (`idRol`);
 
 --
 -- Filtros para la tabla `estudiante`
@@ -334,12 +334,12 @@ ALTER TABLE `estudiante`
 --
 ALTER TABLE `historial_prestamo`
   ADD CONSTRAINT `Historial_Prestamo_idEstudiante_fk` FOREIGN KEY (`idEstudiante`) REFERENCES `estudiante` (`idEstudiante`),
-  ADD CONSTRAINT `Historial_Prestamo_idLibro_fk` FOREIGN KEY (`idLibro`) REFERENCES `libro` (`idLibro`);
+  ADD CONSTRAINT `Historial_Prestamo_idLibro_fk` FOREIGN KEY (`idLibro`) REFERENCES `libros` (`idLibro`);
 
 --
--- Filtros para la tabla `infocontacto`
+-- Filtros para la tabla `info_contacto`
 --
-ALTER TABLE `infocontacto`
+ALTER TABLE `info_contacto`
   ADD CONSTRAINT `InfoContacto_idPersona_fk` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`idPersona`);
 
 --
@@ -349,9 +349,9 @@ ALTER TABLE `logs`
   ADD CONSTRAINT `Logs_idPersona_fk` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`idPersona`);
 
 --
--- Filtros para la tabla `multa`
+-- Filtros para la tabla `multas`
 --
-ALTER TABLE `multa`
+ALTER TABLE `multas`
   ADD CONSTRAINT `multa_idMulta_fk` FOREIGN KEY (`idMulta`) REFERENCES `historial_prestamo` (`idMulta`);
 COMMIT;
 
