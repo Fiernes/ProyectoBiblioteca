@@ -1,6 +1,6 @@
 <?php
 
-class Empleado_Rol {
+class EmpleadoRol {
     private $idEmpleado;
     private $idRol;
     

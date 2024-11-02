@@ -24,6 +24,4 @@ class Carrito_Libros {
     public function setIdLibro($idLibro): void {
         $this->idLibro = $idLibro;
     }
-
-
 }

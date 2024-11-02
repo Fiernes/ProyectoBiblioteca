@@ -1,7 +1,7 @@
 <?php
 
 
-class Logs {
+class Log {
     private $idLog;
     private $accion;
     private $fecha;

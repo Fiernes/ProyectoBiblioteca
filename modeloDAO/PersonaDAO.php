@@ -17,7 +17,7 @@ class PersonaDAO {
             $persona->getIdPersona(),
             $persona->getUsuario(),
             $persona->getPassword(),
-            $persona->getPrimerNombre(),
+            md5($persona->getPrimerNombre()),
             $persona->getSegundoNombre(),
             $persona->getPrimerApellido(),
             $persona->getSegundoApellido(),

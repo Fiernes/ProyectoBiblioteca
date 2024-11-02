@@ -1,6 +1,6 @@
 <?php
 
-class Historial_Prestamo {
+class HistorialPrestamo {
     private $idPrestamo;
     private $fechaPrestamo;
     private $fechaDevolucion;

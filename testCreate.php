@@ -1,7 +1,7 @@
 <?php
-include 'modelo/Conexion.php';
-include 'modelo/Persona.php';
-include 'modeloDAO/PersonaDAO.php';
+include './modelo/Conexion.php';
+include './modelo/Persona.php';
+include './modeloDAO/PersonaDAO.php';
 
 // Crear una conexión a la base de datos
 $dbConnection = new Conexion();
@@ -10,7 +10,7 @@ $dbConnection = new Conexion();
 $personaDAO = new PersonaDAO($dbConnection);
 
 // Crear una nueva Persona utilizando el constructor con parámetros
-$idPersona = 1;
+$idPersona = 4;
 $usuario = "fidel";
 $password = "1234";
 $primerNombre = "Fidel";
