@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('imagenes');
+            background-size: cover;
+            color: #f2EADf;
+        }
+        nav {
+            background-color: #0E1F40;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        nav img {
+            width: 70px;
+            height: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .search, .icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .form-container {
+            background-color: #cbab80;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 1020px;
+            overflow-y: auto;
+            max-height: 81vh;
+            margin-top: 3%;
+        }
+        .btn-primary {
+            background-color: #63a6ea;
+            border-color: #f2A81D;
+        }
+        .btn-primary:hover {
+            background-color: #bf3030;
+            border-color: #bf3030;
+        }
+        .error {
+            color: #f2291D;
+        }
+        .register-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  
+  <!-- Barra de navegación -->
+  <nav>
+    <img src="imagenes/Imagen1.png" alt="logo">
+    <ul>
+      <li><a href="#" class="inicio">Inicio</a></li>
+      <li><a href="#" class="personal">Área personal</a></li>
+      <li><a href="#" class="sobre">Sobre nosotros</a></li>
+    </ul>
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Buscar" class="form-control" style="max-width: 200px;">
+    </div>
+    <div class="icons">
+      <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+      <i class="fa-solid fa-message"></i>
+      <i class="fa-solid fa-circle-user"></i>
+    </div>
+  </nav>
+
+  <!-- Formulario de registro de empleados -->
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="form-container">
+                <h2 class="text-center">Registro de Empleados</h2>
+                <form id="registrationForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="primerNombre">Primer Nombre</label>
+                            <input type="text" class="form-control" id="primerNombre" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="segundoNombre">Segundo Nombre</label>
+                            <input type="text" class="form-control" id="segundoNombre">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="primerApellido">Primer Apellido</label>
+                            <input type="text" class="form-control" id="primerApellido" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="segundoApellido">Segundo Apellido</label>
+                            <input type="text" class="form-control" id="segundoApellido">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="dni">DNI</label>
+                            <input type="text" class="form-control" id="dni" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="correo">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo" required>
+                        </div>
+                    </div>
+                    <h5>Dirección</h5>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" class="form-control" id="ciudad" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="colonia">Colonia</label>
+                            <input type="text" class="form-control" id="colonia" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="barrio">Barrio</label>
+                            <input type="text" class="form-control" id="barrio" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="calle">Calle</label>
+                            <input type="text" class="form-control" id="calle" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="numeroCasa">Número de Casa</label>
+                            <input type="text" class="form-control" id="numeroCasa" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="bloque">Bloque</label>
+                            <input type="text" class="form-control" id="bloque">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="telefonoAlterno">Teléfono Alterno</label>
+                            <input type="tel" class="form-control" id="telefonoAlterno">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="puesto">Puesto</label>
+                            <input type="text" class="form-control" id="puesto" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="horarioLaboral">Horario Laboral</label>
+                            <input type="text" class="form-control" id="horarioLaboral" required>
+                        </div>
+                    </div>
+                    <div class="error" id="error-message"></div>
+                    <div class="register-button-container">
+                        <button type="submit" class="btn btn-primary btn-block mt-3" id="registrarButton">Registrar</button>
+                        <button type="button" class="btn btn-secondary btn-block mt-3" id="cancelarButton">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('registrationForm').onsubmit = function(event) {
+        event.preventDefault(); //

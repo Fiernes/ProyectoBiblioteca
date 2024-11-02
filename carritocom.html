@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #eceae3; /* Color de fondo de la página */
+      font-family: 'Arial', sans-serif;
+    }
+    nav {
+      background-color: #0E1F40; /* Color de la barra de navegación */
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #BF303C; /* Color de las filas impares de la tabla */
+    }
+    .total {
+      background-color: #F2921D; /* Color de fondo del contenedor total */
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    button.btn-danger {
+      background-color: #BF303C; /* Color del botón de eliminar */
+    }
+    button.btn-success {
+      background-color: #0E1F40; /* Color del botón de prestar */
+      color: #fff; /* Color del texto del botón */
+    }
+    button.btn-danger:hover, button.btn-success:hover {
+      opacity: 0.9; /* Efecto hover para los botones */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img src="imagenes/Imagen1.png" alt="logo" style="width: 70px; height: auto;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Área personal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+      </ul>
+      <div class="search d-flex align-items-center">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="form-control ml-2" placeholder="Buscar" style="max-width: 200px;">
+      </div>
+      <div class="icons d-flex align-items-center ml-3">
+        <i class="fa-sharp fa-solid fa-cart-shopping mr-3"></i>
+        <i class="fa-solid fa-message mr-3"></i>
+        <i class="fa-solid fa-circle-user mr-3"></i>
+       
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2>
+      <img src="imagenes/venta.png" alt="Ícono de venta" style="width: 30px; height: auto; margin-right: 10px;">
+      Carrito de Prestamos 
+    </h2>
+    <p>Usuario: <strong>Nombre del Usuario</strong></p>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Código del Libro</th>
+            <th>Nombre del Libro</th>
+            <th>Cantidad</th>
+            <th>Categoría</th>
+            <th>Ejemplar</th>
+            <th>Estado</th>
+            <th>Cantidad Libros a Prestar</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Ejemplo de Libro</td>
+            <td>2</td>
+            <td>Ficción</td>
+            <td>Ejemplar 1</td>
+            <td>Nuevo</td>
+            <td>2</td>
+            <td><button class="btn btn-danger btn-sm">Eliminar</button></td>
+          </tr>
+          <!-- Agrega más filas según sea necesario -->
+        </tbody>
+      </table>
+      <div class="total">
+        <p><strong>Cantidad Total de Libros a Prestar:</strong> 2</p>
+        <button class="btn btn-success">Prestar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
