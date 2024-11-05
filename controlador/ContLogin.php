@@ -6,7 +6,7 @@ session_start();
 
 echo "esta aqui";
 // Verifica que se hayan enviado los datos
-if ($_SERVER['btnIniciar'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
 
@@ -21,7 +21,7 @@ if ($_SERVER['btnIniciar'] === 'POST') {
     if ($persona) {
         // Si se autentica correctamente, guarda al usuario en la sesión
         $_SESSION['usuario'] = $persona;
-        header("Location: ../carritocom.html"); // Redirige al dashboard o página principal
+        header("Location: ../menu.html"); // Redirige al dashboard o página principal
         exit();
     } else {
         // Si falla, muestra un mensaje de error

@@ -1,5 +1,7 @@
 <?php
 
+require_once '../modelo/Persona.php';
+
 class PersonaDAO {
 
     private $conn;
@@ -11,7 +13,7 @@ class PersonaDAO {
 
     public function login($usuario, $pass) {
         $paswordCifrada = md5($pass);
-        $sql = "SELECT * FROM persona WHERE usuario = ? AND passwordUsu = ?";
+        $sql = "SELECT * FROM persona WHERE usuario = ? AND password = ?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ss", $usuario, $paswordCifrada); // "ss" indica dos strings como parámetros
         $stmt->execute();
@@ -40,8 +42,8 @@ class PersonaDAO {
         $stmt->execute([
             $persona->getIdPersona(),
             $persona->getUsuario(),
-            $persona->getPassword(),
-            md5($persona->getPrimerNombre()),
+            md5($persona->getPassword()),
+            $persona->getPrimerNombre(),
             $persona->getSegundoNombre(),
             $persona->getPrimerApellido(),
             $persona->getSegundoApellido(),
