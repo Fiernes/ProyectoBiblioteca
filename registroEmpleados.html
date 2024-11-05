@@ -4,87 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Empleados</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/regempleados.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-image: url('imagenes');
-            background-size: cover;
-            color: #f2EADf;
-        }
-        nav {
-            background-color: #0E1F40;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-        nav img {
-            width: 70px;
-            height: auto;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .search, .icons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .form-container {
-            background-color: #cbab80;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 50px auto;
-            max-width: 1020px;
-            overflow-y: auto;
-            max-height: 81vh;
-            margin-top: 3%;
-        }
-        .btn-primary {
-            background-color: #63a6ea;
-            border-color: #f2A81D;
-        }
-        .btn-primary:hover {
-            background-color: #bf3030;
-            border-color: #bf3030;
-        }
-        .error {
-            color: #f2291D;
-        }
-        .register-button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-  
+
   <!-- Barra de navegación -->
-  <nav>
-    <img src="imagenes/Imagen1.png" alt="logo">
-    <ul>
-      <li><a href="#" class="inicio">Inicio</a></li>
-      <li><a href="#" class="personal">Área personal</a></li>
-      <li><a href="#" class="sobre">Sobre nosotros</a></li>
-    </ul>
-    <div class="search">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Buscar" class="form-control" style="max-width: 200px;">
-    </div>
-    <div class="icons">
-      <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-      <i class="fa-solid fa-message"></i>
-      <i class="fa-solid fa-circle-user"></i>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">
+        <img src="imagenes/Imagen1.png" alt="logo" style="width: 70px; height: auto;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li><a href="#" class="inicio">Inicio</a></li>
+        <li><a href="#" class="personal">Área personal</a></li>
+        <li><a href="#" class="sobre">Sobre nosotros</a></li>
+      </ul>
+      <div class="search d-flex align-items-center">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="form-control ml-2" placeholder="Buscar" style="max-width: 200px;">
+      </div>
+      <div class="icons d-flex align-items-center ml-3">
+        <i class="fa-sharp fa-solid fa-cart-shopping mr-3"></i>
+        <i class="fa-solid fa-message mr-3"></i>
+        <i class="fa-solid fa-circle-user mr-3"></i>
+      </div>
     </div>
   </nav>
 
@@ -190,6 +140,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.getElementById('registrationForm').onsubmit = function(event) {
-        event.preventDefault(); //
+</body>
+</html>
