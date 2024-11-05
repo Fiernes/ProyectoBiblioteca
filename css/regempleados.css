@@ -32,6 +32,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: white;
 }
 
 /* Agregar color blanco a los íconos de la barra de navegación */
