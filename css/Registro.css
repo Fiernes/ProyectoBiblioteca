@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0e1f40;
+}
+
+.container {
+    display: flex;
+    height: 480px;
+    width: 1150px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+.info {
+    background-image: url(../imagenes/fondoRegistro.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 50px;
+    width: 100%;
+    
+}
+
+.form {
+    padding: 50px 100px;
+    width: 100%;
+    overflow-y: scroll;
+    height: 480px;
+    text-align: center;
+    background-color: #fff
+    
+}
+
+.form h2 {
+    color: #185592;
+    font-size: 40px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-weight: bolder;
+}
+
+.form p {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 25px;
+
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    outline: none;
+    border-color: #ecc100;
+    border-width: 0px 0px 0px 5px;
+    border-style: solid;
+    padding: 15px 35px;
+    margin-bottom: 20px;
+    background-color: #F9F9F9;
+}
+
+.submit {
+    background-color: #097EF6;
+    padding: 15px;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: #220a4e;
+    transition: background-color 0.50s ease;
+    color: #f2eadf;
+}
+
+nav {
+    background-color: #f2eadf;
+    border-radius: 25px;
+    border-color: #060d1b;
+    position: relative;
+    top: 30px;
+    width: 90%;
+    margin-left: 60px;
+    display: flex;
+
+    padding: 4px;
+
+
+}
+
+nav a {
+
+    color: #140f27;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+nav a:hover {
+    background-color: #ffbc04;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.80s ease;
+    /* Transición suave para el cambio de color de fondo */
+    border-radius: 8px;
+}
+
+img {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.login-button {
+    font-weight: bold;
+    background-color: #d41e2d;
+    border-color: #d41e2d;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 700px;
+    width: 100px;
+    height: 50px;
+    padding: 14px 16px;
+    font-size: 17px;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+.login-button:hover {
+    background-color: #a01b1b;
+    transition: background-color 0.50s ease;
+    color: #f2eadf;
+    
+}
+
+/*respnsive*/
+@media(max-width:990px) {
+    .container {
+        width: 350px;
+        height: 600px;
+        margin-top: 100px;
+    }
+
+    
+    .info{ display: none;
+    }
+
+    .form {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .form h2 {
+        margin-top: 40px;
+    }
+}
