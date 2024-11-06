@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de Usuario</title>
+  <link rel="stylesheet" href="css/historialUsuario.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+  <!-- Barra de búsqueda -->
+  <nav>
+    <img src="./imagenes/logo.png" alt="logo" style="width: 70px; height: auto;">
+    <ul>
+      <li><a href="#" class="inicio">Inicio</a></li>
+      <li><a href="#" class="personal">Área personal</a></li>
+      <li><a href="#" class="sobre">Sobre nosotros</a></li>
+    </ul>
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="search">
+    </div>
+    <div class="icons">
+      <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+      <i class="fa-solid fa-message"></i>
+      <i class="fa-solid fa-circle-user"></i>
+    </div>
+  </nav>
+
+  <!-- Contenido de Historial de Usuario -->
+  <div class="titulo">
+    <h1>Historial de Usuario</h1>
+    
+</div>
+
+  <main>
+    
+    <section class="tabla-historial">
+      <!-- Tabla de Préstamos -->
+      <div class="tabla-prestamos">
+        <h2>PRÉSTAMOS</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Libro</th>
+              <th>Fecha de Préstamo</th>
+              <th>Fecha de Devolución</th>
+              <th>Estado del Préstamo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>El Quijote</td>
+              <td>5/09/2024</td>
+              <td>19/09/2024</td>
+              <td>completado</td>
+            </tr>
+            
+            <tr>
+              <td>1984</td>
+              <td>12/09/2024</td>
+              <td>26/09/2024</td>
+              <td>activo</td>
+            </tr>
+            <tr>
+              <td>La Odisea</td>
+              <td>25/08/2024</td>
+              <td>08/09/2024</td>
+              <td>vencido</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tabla de Devoluciones -->
+      <div class="tabla-devoluciones">
+        <h2>DEVOLUCIONES</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Libro</th>
+              <th>Fecha de Devolución</th>
+              <th>Estado</th>
+              <th>Multa Aplicada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>El Quijote</td>
+              <td>18/09/2024</td>
+              <td>buen estado</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>La Odisea</td>
+              <td>15/09/2024</td>
+              <td>mal estado</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td>1984</td>
+              <td>N/A</td>
+              <td>N/A</td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tabla de Multas -->
+      <div class="tabla-multas">
+        <h2>MULTAS</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Motivo</th>
+              <th>Fecha</th>
+              <th>Monto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>devolución tardía</td>
+              <td>15/09/2024</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td>devolución tardía</td>
+              <td>15/09/2024</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td>devolución tardía</td>
+              <td>15/09/2024</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td>devolución tardía</td>
+              <td>15/09/2024</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td>devolución tardía</td>
+              <td>15/09/2024</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td>devolución tardía</td>
+              <td>15/09/2024</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td>devolución tardía</td>
+              <td>15/09/2024</td>
+              <td>50.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Resumen -->
+      <div class="resumen">
+        <h2>RESUMEN</h2>
+        <p>Total libros Prestados: 43</p>
+        <p>Libro Favorito: Programación para tontos, 8va edición.</p>
+        <p>Total Multas: 0</p>
+      </div>
+    </section>
+    <button onclick="window.location.href='perfilUsuario.html'">Volver</button>
+  </main>
+</body>
+</html>
