@@ -1,0 +1,51 @@
+body {
+    background-color: #eceae3; /* Color de fondo de la página */
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    background-color: #0E1F40; /* Color de la barra de navegación */
+}
+
+.navbar-brand img {
+    width: 70px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Color de los enlaces de la barra de navegación */
+}
+
+/* Color blanco para los íconos en la barra de navegación */
+.icons i {
+    color: white;
+}
+
+.search input[type="text"] {
+    max-width: 200px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #BF303C; /* Color de las filas impares de la tabla */
+}
+
+.total {
+    background-color: #F2921D; /* Color de fondo del contenedor total */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button.btn-danger {
+    background-color: #BF303C; /* Color del botón de eliminar */
+}
+
+button.btn-success {
+    background-color: #0E1F40; /* Color del botón de prestar */
+    color: #fff; /* Color del texto del botón */
+}
+
+button.btn-danger:hover,
+button.btn-success:hover {
+    opacity: 0.9; /* Efecto hover para los botones */
+}

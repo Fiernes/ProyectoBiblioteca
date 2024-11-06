@@ -1,0 +1,71 @@
+body {
+    background-image: url('imagenes');
+    background-size: cover;
+    color: #f8f7f4;
+}
+
+nav {
+    background-color: #0E1F40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav img {
+    width: 70px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.search, .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+/* Agregar color blanco a los íconos de la barra de navegación */
+.icons i {
+    color: white;
+}
+
+.form-container {
+    background-color: #deaf6d;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 1020px;
+    overflow-y: auto;
+    max-height: 81vh;
+    margin-top: 5%;
+}
+
+.btn-primary {
+    background-color: #100455;
+    border-color: #f2A81D;
+}
+
+.btn-primary:hover {
+    background-color: #bf3030;
+    border-color: #bf3030;
+}
+
+.error {
+    color: #f2291D;
+}
+
+.register-button-container {
+    text-align: center;
+    margin-top: 20px;
+}

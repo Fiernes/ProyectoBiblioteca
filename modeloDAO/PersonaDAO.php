@@ -1,5 +1,7 @@
 <?php
 
+require_once '../modelo/Persona.php';
+
 class PersonaDAO {
 
     private $conn;
@@ -9,6 +11,30 @@ class PersonaDAO {
         $this->conn = $dbConnection->getConnection(); // Obtenemos el objeto de conexión
     }
 
+    public function login($usuario, $pass) {
+        $paswordCifrada = md5($pass);
+        $sql = "SELECT * FROM persona WHERE usuario = ? AND password = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ss", $usuario, $paswordCifrada); // "ss" indica dos strings como parámetros
+        $stmt->execute();
+    
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+    
+        if ($row) {
+            return new Persona(
+                $row['idPersona'],
+                $row['usuario'],
+                $row['password'],
+                $row['primerNombre'],
+                $row['segundoNombre'],
+                $row['primerApellido'],
+                $row['segundoApellido'],
+                $row['DNI']      
+            );
+        }
+    }
+
     public function crearPersona($persona) {
         $sql = "INSERT INTO persona (idPersona, usuario, password, primerNombre, segundoNombre, primerApellido, segundoApellido, DNI) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
@@ -16,8 +42,8 @@ class PersonaDAO {
         $stmt->execute([
             $persona->getIdPersona(),
             $persona->getUsuario(),
-            $persona->getPassword(),
-            md5($persona->getPrimerNombre()),
+            md5($persona->getPassword()),
+            $persona->getPrimerNombre(),
             $persona->getSegundoNombre(),
             $persona->getPrimerApellido(),
             $persona->getSegundoApellido(),
@@ -49,6 +75,8 @@ class PersonaDAO {
         }
         return null;
     }
+
+    
 
     public function actualizarPersona($persona) {
         $sql = "UPDATE persona SET usuario = ?, password = ?, primerNombre = ?, segundoNombre = ?, primerApellido = ?, segundoApellido = ?, DNI = ?
