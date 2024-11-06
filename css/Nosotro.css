@@ -1,0 +1,47 @@
+.hero {
+    background-image: url('../imagenes/hans-jurgen-weinhardt-FZ5nx86tP2U-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajusta esta altura según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 80px; /* Ajusta el tamaño de fuente según tus preferencias */
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #F2EADF;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+p {
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Estilos específicos para la sección */
+.biblioteca-virtual {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los servicios */
+.servicios {
+    margin-top: 30px;
+}
