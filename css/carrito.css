@@ -1,51 +1,101 @@
+/* Estilo global */
 body {
     background-color: #eceae3; /* Color de fondo de la página */
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* Barra de navegación */
 nav {
     background-color: #0E1F40; /* Color de la barra de navegación */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
+/* Logo de la barra de navegación */
 .navbar-brand img {
     width: 70px;
     height: auto;
 }
 
+/* Estilo de los enlaces de la barra de navegación */
 .navbar-nav .nav-link {
-    color: white; /* Color de los enlaces de la barra de navegación */
+    color: white;
+    text-decoration: none;
 }
 
-/* Color blanco para los íconos en la barra de navegación */
+/* Estilo para los íconos en la barra de navegación */
 .icons i {
     color: white;
+    transition: transform 0.3s ease;
 }
 
-.search input[type="text"] {
-    max-width: 200px;
+/* Efecto hover para los íconos */
+.icons i:hover {
+    transform: scale(1.2);
 }
 
+/* Contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 20px; /* Ajuste para separación de la izquierda */
+}
+
+/* Ícono de la lupa fuera del campo de búsqueda */
+.search-icon {
+    position: absolute;
+    left: -40px;  /* Mueve la lupa hacia fuera del campo de búsqueda */
+    color: rgb(82, 33, 33); /* Color blanco para la lupa */
+    font-size: 1.5em; /* Tamaño grande para mejor visibilidad */
+    z-index: 2;  /* Asegura que la lupa esté encima */
+}
+
+/* Campo de entrada para la búsqueda */
+.search-container input[type="text"] {
+    padding-left: 40px; /* Da espacio al campo de búsqueda para que no se solape con la lupa */
+    max-width: 300px;
+    color: #0E1F40;
+    background-color: #f8f7f4;
+    border-radius: 4px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+
+/* Estilo para las filas impares de la tabla */
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #BF303C; /* Color de las filas impares de la tabla */
+    background-color: #BF303C;
 }
 
+/* Contenedor del total */
 .total {
-    background-color: #F2921D; /* Color de fondo del contenedor total */
+    background-color: #F2921D;
     padding: 15px;
     border-radius: 5px;
     margin-top: 20px;
 }
 
+/* Estilo para el botón de eliminar */
 button.btn-danger {
-    background-color: #BF303C; /* Color del botón de eliminar */
+    background-color: #BF303C;
 }
 
+/* Estilo para el botón de prestar */
 button.btn-success {
-    background-color: #0E1F40; /* Color del botón de prestar */
-    color: #fff; /* Color del texto del botón */
+    background-color: #0E1F40;
+    color: #fff;
 }
 
+/* Efecto hover para los botones */
 button.btn-danger:hover,
 button.btn-success:hover {
-    opacity: 0.9; /* Efecto hover para los botones */
+    opacity: 0.9;
 }
