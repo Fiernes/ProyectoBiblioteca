@@ -1,0 +1,151 @@
+body {
+    background-image: url('imagenes');
+    background-size: cover;
+    color: #f8f7f4;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #0E1F40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que la barra de navegación esté siempre encima */
+}
+
+nav img {
+    width: 70px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a, .icons i {
+    color: white;
+    text-decoration: none;
+}
+
+.search, .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search i {
+    color: #f8f7f4; /* Cambié el color a un tono más claro para que sea visible */
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.search i:hover {
+    transform: scale(1.5);
+}
+
+.icons i {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icons i:hover {
+    transform: scale(1.5);
+}
+
+.form-container {
+    background-color: #deaf6d;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 1020px;
+    overflow-y: auto;
+    max-height: 81vh;
+    position: relative;
+    padding-bottom: 100px; /* Espacio adicional para los botones */
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.error {
+    color: #f2291D;
+}
+
+/* Botones centrados en la parte inferior sin recuadro */
+.register-button-container {
+    position: fixed;
+    bottom: 20px; /* Para asegurarse de que no queden pegados al borde */
+    left: 50%;
+    transform: translateX(-50%); /* Esto centra los botones */
+    display: flex;
+    justify-content: center; /* Asegura que los botones estén centrados */
+    gap: 20px;
+    z-index: 10; /* Asegura que los botones se muestren por encima de otros elementos */
+}
+
+#registrarButton {
+    background-color: #100455;
+    border-color: #f2A81D;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    width: 45%; /* Ajusta el tamaño */
+    border: none; /* Elimina el borde alrededor del botón */
+}
+
+#registrarButton:hover {
+    background-color: #bf3030;
+    border-color: #bf3030;
+}
+
+#cancelarButton {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    width: 45%; /* Ajusta el tamaño */
+    border: none; /* Elimina el borde alrededor del botón */
+}
+
+#cancelarButton:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.Volver {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.Volver:hover {
+    text-decoration: underline;
+}

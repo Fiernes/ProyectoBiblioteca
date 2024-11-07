@@ -10,7 +10,7 @@ $dbConnection = new Conexion();
 $personaDAO = new PersonaDAO($dbConnection);
 
 // Crear una nueva Persona utilizando el constructor con parámetros
-$idPersona = 4;
+$idPersona = 1;
 $usuario = "fidel";
 $password = "1234";
 $primerNombre = "Fidel";

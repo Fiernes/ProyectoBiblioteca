@@ -1,5 +1,7 @@
 <?php
 
+require_once '../modelo/Persona.php';
+
 class PersonaDAO {
 
     private $conn;
@@ -9,6 +11,49 @@ class PersonaDAO {
         $this->conn = $dbConnection->getConnection(); // Obtenemos el objeto de conexión
     }
 
+    public function obtenerIdMax() {
+        $sql = "SELECT MAX(idPersona) FROM persona";
+        $stmt = $this->conn->prepare($sql);  // Prepara la consulta SQL
+    
+        $stmt->execute();  // Ejecuta la consulta
+    
+        // Obtener el resultado
+        $result = $stmt->get_result();
+        $id = 0;  // Inicializa el id en 0 por si no hay resultados
+    
+        // Si existe un resultado, obtiene el valor
+        if ($row = $result->fetch_row()) {
+            $id = $row[0];  // El valor de MAX(id) estará en la primera columna
+        }
+    
+        return $id;  // Devuelve el id
+    }
+    
+
+    public function login($usuario, $pass) {
+        $paswordCifrada = md5($pass);
+        $sql = "SELECT * FROM persona WHERE usuario = ? AND password = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ss", $usuario, $paswordCifrada); // "ss" indica dos strings como parámetros
+        $stmt->execute();
+    
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+    
+        if ($row) {
+            return new Persona(
+                $row['idPersona'],
+                $row['usuario'],
+                $row['password'],
+                $row['primerNombre'],
+                $row['segundoNombre'],
+                $row['primerApellido'],
+                $row['segundoApellido'],
+                $row['DNI']      
+            );
+        }
+    }
+
     public function crearPersona($persona) {
         $sql = "INSERT INTO persona (idPersona, usuario, password, primerNombre, segundoNombre, primerApellido, segundoApellido, DNI) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
@@ -16,8 +61,8 @@ class PersonaDAO {
         $stmt->execute([
             $persona->getIdPersona(),
             $persona->getUsuario(),
-            $persona->getPassword(),
-            md5($persona->getPrimerNombre()),
+            md5($persona->getPassword()),
+            $persona->getPrimerNombre(),
             $persona->getSegundoNombre(),
             $persona->getPrimerApellido(),
             $persona->getSegundoApellido(),
@@ -49,6 +94,8 @@ class PersonaDAO {
         }
         return null;
     }
+
+    
 
     public function actualizarPersona($persona) {
         $sql = "UPDATE persona SET usuario = ?, password = ?, primerNombre = ?, segundoNombre = ?, primerApellido = ?, segundoApellido = ?, DNI = ?
