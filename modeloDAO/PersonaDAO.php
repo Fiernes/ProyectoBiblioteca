@@ -11,6 +11,25 @@ class PersonaDAO {
         $this->conn = $dbConnection->getConnection(); // Obtenemos el objeto de conexión
     }
 
+    public function obtenerIdMax() {
+        $sql = "SELECT MAX(idPersona) FROM persona";
+        $stmt = $this->conn->prepare($sql);  // Prepara la consulta SQL
+    
+        $stmt->execute();  // Ejecuta la consulta
+    
+        // Obtener el resultado
+        $result = $stmt->get_result();
+        $id = 0;  // Inicializa el id en 0 por si no hay resultados
+    
+        // Si existe un resultado, obtiene el valor
+        if ($row = $result->fetch_row()) {
+            $id = $row[0];  // El valor de MAX(id) estará en la primera columna
+        }
+    
+        return $id;  // Devuelve el id
+    }
+    
+
     public function login($usuario, $pass) {
         $paswordCifrada = md5($pass);
         $sql = "SELECT * FROM persona WHERE usuario = ? AND password = ?";

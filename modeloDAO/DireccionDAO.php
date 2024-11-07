@@ -10,7 +10,7 @@ class DireccionDAO {
     }
 
     // Método para agregar una nueva dirección para una persona
-    public function agregarDireccion($direccion) {
+    public function crearDireccion($direccion) {
         $sql = "INSERT INTO direccion (idPersona, departamento, ciudad, colonia, numeroCasa) 
                 VALUES (?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
