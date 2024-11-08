@@ -3,49 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito de Compras</title>
-  <link rel="stylesheet" href="../ProyectoBiblioteca/css/barranav.css">
-  <link rel="stylesheet" href="./css/carrito.css">
+  <h1>Carrito de Compras</h1>
+  <link rel="stylesheet" href="css/carrito.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">
-      <img src="../ProyectoBiblioteca/imagenes/logo.png" alt="logo" style="width: 70px; height: auto;">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link" href="menu.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="PerfilUsuario.html">Área personal</a></li>
-        <li class="nav-item"><a class="nav-link" href="Nosotro.html">Sobre nosotros</a></li>
-      </ul>
-      <div class="search">
-        <!-- Lupa fuera del campo de búsqueda -->
-        <span class="search-icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </span>
-        <input type="text" class="form-control ml-2" placeholder="Buscar" style="max-width: 200px;">
-      </div>
-      <div class="icons d-flex align-items-center ml-3">
-        <i class="fa-sharp fa-solid fa-cart-shopping mr-3"></i>
-        <i class="fa-solid fa-message mr-3"></i>
-        <a href="PerfilUsuario.html" style="text-decoration: none; color: white;">
-        <i class="fa-solid fa-circle-user"></i>
-      </div>
-      
+
+  <nav>
+    <img src=".\imagenes\logo.png" alt="logo" style="width: 70px; height: auto;">
+    <ul>
+      <li><a href="menu.html" class="inicio">Inicio</a></li>
+      <li><a href="PerfilUsuario.html" class="personal">Área personal</a></li>
+      <li><a href="Nosotro.html" class="sobre">Sobre nosotros</a></li>
+    </ul>
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Buscar">
+    </div>
+    <div class="icons">
+      <a href="carritocom.html" class="boton-carrito">
+        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+      </a>
+      <i class="fa-solid fa-message"></i>
+      <a href="PerfilUsuario.html" style="text-decoration: none; color: white;">
+      <i class="fa-solid fa-circle-user"></i>
+      </a>
     </div>
   </nav>
 
   <div class="container mt-5">
     <h2>
-      <img src="imagenes/carritocompras.jpg" alt="Ícono de venta" style="width: 60px; height: auto; margin-right: 10px;">
+      <img src=".\imagenes\carritocompras.jpg" alt="Ícono de venta" style="width: 60px; height: auto; margin-right: 10px;">
       Carrito de Prestamos 
     </h2>
     <p>Usuario: <strong>Nombre del Usuario</strong></p>
