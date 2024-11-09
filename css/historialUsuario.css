@@ -101,16 +101,27 @@ h1 {
     display: flex;
     align-items: center;
     gap: 15px;
-    color: #e0e0d1;
+    color: white;
     font-size: 23px;
   }
   
+  .icons .fa-cart-shopping {
+    color: white; 
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .icons .fa-cart-shopping:hover {
+    color: white;
+    transform: scale(1.3);
+    filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5));
+  }
+
   .icons i {
     transition: transform 0.3s ease, color 0.3s ease;
   }
   
   .icons i:hover {
-    color: #ffffff;
+    color: white;
     transform: scale(1.3);
     filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5));
   }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -48,6 +49,154 @@ body {
   }
   
   .icons i {
+=======
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  padding-top: 100px;
+}
+
+/* Barra principal */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0E1F40;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: 'Rubik', sans-serif;
+  padding-left: 20px;
+}
+
+nav img {
+  height: 50px; 
+  margin-right: 20px;
+}
+
+/* Contenedor del menú y la búsqueda */
+nav .nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #F2A81D; 
+  transform: scale(1.3); 
+}
+
+/* Estilo para la barra de búsqueda */
+.search {
+  position: relative;
+  max-width: 400px;
+  display: flex;
+  align-items: center; 
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0 20px;
+  flex: 1; 
+}
+
+.search i {
+  color: #999;
+  font-size: 18px;
+}
+
+.search input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Estilo de iconos de la barra*/
+.icons {
+  display: flex;
+  align-items: center; 
+  gap: 15px;
+  color: #e0e0d1;
+  font-size: 23px;
+}
+
+.icons .fa-cart-shopping {
+  color: white; 
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons .fa-cart-shopping:hover {
+  color: white;
+  transform: scale(1.3);
+  filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5));
+}
+
+.icons i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons i:hover {
+  color: white; 
+  transform: scale(1.3); 
+  filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5)); 
+}
+
+
+/* Estilo para las filas impares de la tabla */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #BF303C;
+}
+
+/* Contenedor del total */
+.total {
+    background-color: #F2921D;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Estilo para el botón de eliminar */
+button.btn-danger {
+    background-color: #BF303C;
+}
+
+/* Estilo para el botón de prestar */
+button.btn-success {
+    background-color: #0E1F40;
+>>>>>>> d41c14c4a3574b25b785bf6d656005d6d2870ca3
     color: #fff;
     font-size: 18px;
   }
