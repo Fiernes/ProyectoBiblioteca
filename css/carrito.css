@@ -7,6 +7,7 @@
 
 body {
   font-family: 'Rubik', sans-serif;
+  padding-top: 100px;
 }
 
 /* Barra principal */
@@ -15,31 +16,41 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px; 
   background-color: #0E1F40;
   color: #fff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
+  font-family: 'Rubik', sans-serif;
+  padding-left: 20px;
 }
 
 nav img {
-  height: 50px; /* Tamaño del logo */
+  height: 50px; 
   margin-right: 20px;
+}
+
+/* Contenedor del menú y la búsqueda */
+nav .nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 30px;
   margin: 0;
   padding: 0;
-  align-items: center; /* Alineación vertical de los elementos del menú */
 }
 
 nav ul li {
-  display: inline; /* Mantiene los elementos del menú en una línea */
+  display: inline; 
 }
 
 nav ul li a {
@@ -54,16 +65,17 @@ nav ul li a:hover {
   transform: scale(1.3); 
 }
 
+/* Estilo para la barra de búsqueda */
 .search {
   position: relative;
   max-width: 400px;
   display: flex;
-  align-items: center; /* Centra el icono y el campo de búsqueda verticalmente */
+  align-items: center; 
   background-color: #fff;
   border-radius: 20px;
   padding: 5px 10px;
   margin: 0 20px;
-  flex: 1; /* Ocupa el espacio entre el menú y los iconos */
+  flex: 1; 
 }
 
 .search i {
@@ -80,6 +92,7 @@ nav ul li a:hover {
   font-size: 16px;
 }
 
+/* Estilo de iconos de la barra*/
 .icons {
   display: flex;
   align-items: center; 
@@ -108,7 +121,6 @@ nav ul li a:hover {
   transform: scale(1.3); 
   filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5)); 
 }
-
 
 
 /* Estilo para las filas impares de la tabla */
