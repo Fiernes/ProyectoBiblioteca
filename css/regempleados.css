@@ -4,6 +4,7 @@ body {
     color: #f8f7f4;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
 }
 
 nav {
@@ -15,7 +16,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Asegura que la barra de navegación esté siempre encima */
+    z-index: 1000;
 }
 
 nav img {
@@ -41,7 +42,7 @@ nav ul li a, .icons i {
 }
 
 .search i {
-    color: #f8f7f4; /* Cambié el color a un tono más claro para que sea visible */
+    color: #f8f7f4;
     font-size: 24px;
     transition: transform 0.3s ease;
 }
@@ -67,9 +68,9 @@ nav ul li a, .icons i {
     margin: 50px auto;
     max-width: 1020px;
     overflow-y: auto;
-    max-height: 81vh;
+    /* Reducir la altura del contenedor del formulario considerando la altura de los botones */
+    max-height: calc(100vh - 160px); /* Ajusta la altura disponible, dejando espacio para los botones */
     position: relative;
-    padding-bottom: 100px; /* Espacio adicional para los botones */
 }
 
 h2 {
@@ -95,26 +96,33 @@ h2 {
     color: #f2291D;
 }
 
-/* Botones centrados en la parte inferior sin recuadro */
 .register-button-container {
     position: fixed;
-    bottom: 20px; /* Para asegurarse de que no queden pegados al borde */
+    bottom: 20px; /* Se asegura que los botones no queden pegados al borde */
     left: 50%;
-    transform: translateX(-50%); /* Esto centra los botones */
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center; /* Asegura que los botones estén centrados */
-    gap: 20px;
-    z-index: 10; /* Asegura que los botones se muestren por encima de otros elementos */
+    justify-content: space-between; /* Distribuye los botones */
+    gap: 10px; /* Espacio entre los botones */
+    z-index: 10;
+    width: 1020px; /* El ancho ahora es igual al ancho del formulario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para que resalte */
+    padding: 15px 20px; /* Añadido relleno superior e inferior y margen lateral */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+#registrarButton, #cancelarButton {
+    padding: 12px 20px;
+    border-radius: 4px;
+    width: 48%; /* Los botones ocupan el 48% del contenedor */
+    border: none;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
 }
 
 #registrarButton {
     background-color: #100455;
     border-color: #f2A81D;
     color: #fff;
-    padding: 12px 20px;
-    border-radius: 4px;
-    width: 45%; /* Ajusta el tamaño */
-    border: none; /* Elimina el borde alrededor del botón */
 }
 
 #registrarButton:hover {
@@ -126,10 +134,6 @@ h2 {
     background-color: #6c757d;
     border-color: #6c757d;
     color: white;
-    padding: 12px 20px;
-    border-radius: 4px;
-    width: 45%; /* Ajusta el tamaño */
-    border: none; /* Elimina el borde alrededor del botón */
 }
 
 #cancelarButton:hover {
@@ -137,27 +141,17 @@ h2 {
     border-color: #545b62;
 }
 
-/*.Volver {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-}*/
-
-.Regreso{ /*botón volver*/
+.Regreso {
     background-color: #BF303C;
-    padding: 10px 30px; /* Ajusta el relleno */
+    padding: 10px 30px;
     text-decoration: none;
     color: #fff;
-    border-radius: 5px; /* Añade esquinas redondeadas */
-    margin-left:40px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
-   
-  }
+    border-radius: 5px;
+    margin-left: 40px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 .Regreso:hover {
     text-decoration: none;
-    color:#fff;
+    color: #fff;
 }
