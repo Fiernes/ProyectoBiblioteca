@@ -44,28 +44,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $infoContactoDAO = new InfoContactoDAO($dbConnection);
         $estudianteDAO = new EstudianteDAO($dbConnection);
 
-        $nuevaPersona = new Persona($idPersona, $usuario, $password, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $dni);
         // Obtener el nuevo ID de persona
         $idPersona = $personaDAO->obtenerIdMax();
         echo $idPersona;
 
         // Si $idPersona es null, asigna el valor 1
         $idPersona = ($idPersona == null) ? 1 : $idPersona;
-
-        // Crear instancias de los objetos        
-        echo $idPersona;
+        
+        $nuevaPersona = new Persona($idPersona, $usuario, $password, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $dni);
         $nuevaDireccion = new Direccion($idPersona, $departamento, $ciudad, $colonia, $numeroCasa);
-        echo $idPersona;
         $nuevoContacto = new InfoContacto($idPersona, $correo, $telefono, $telefonoPersonal, $telefonoRespaldo);
-        echo $idPersona;
         $nuevoEstudiante = new Estudiante($numeroCuenta, $idPersona, $carrera);
-        echo $idPersona;
+
 
         // Guardar datos y verificar éxito
         $personaDAO->crearPersona($nuevaPersona);
-                           $direccionDAO->crearDireccion($nuevaDireccion);
-                           $infoContactoDAO->crearInfoContacto($nuevoContacto);
-                           $estudianteDAO->crearEstudiante($nuevoEstudiante);
+        $direccionDAO->crearDireccion($nuevaDireccion);
+        $infoContactoDAO->crearInfoContacto($nuevoContacto);
+        $estudianteDAO->crearEstudiante($nuevoEstudiante);
 
         if ($registroExitoso) {
             header("Location: ../Login.html");
@@ -80,4 +76,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: ../Registro.html");
     exit();
 }
-?>
+
