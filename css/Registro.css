@@ -150,7 +150,7 @@ img {
     
 }
 
-/*respnsive*/
+/*responsive*/
 @media(max-width:990px) {
     .container {
         width: 350px;
@@ -171,3 +171,4 @@ img {
         margin-top: 40px;
     }
 }
+
