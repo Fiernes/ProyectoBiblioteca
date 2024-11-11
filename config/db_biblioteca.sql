@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-11-2024 a las 21:02:18
+-- Tiempo de generación: 09-11-2024 a las 18:45:39
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -57,6 +57,13 @@ CREATE TABLE `direccion` (
   `colonia` varchar(50) DEFAULT NULL,
   `numeroCasa` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `direccion`
+--
+
+INSERT INTO `direccion` (`idPersona`, `departamento`, `ciudad`, `colonia`, `numeroCasa`) VALUES
+(1, 'Francisco morazan', 'tegucigalpa', 'la trinidad', '12');
 
 -- --------------------------------------------------------
 
@@ -187,6 +194,13 @@ CREATE TABLE `persona` (
   `DNI` varchar(13) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`idPersona`, `usuario`, `password`, `primerNombre`, `segundoNombre`, `primerApellido`, `segundoApellido`, `DNI`) VALUES
+(1, 'Usu', 'd9b1d7db4cd6e70935368a1efb10e377', 'Fidel', 'Ernesto', 'Gutierrez', 'Membreño', '0801199501590');
+
 -- --------------------------------------------------------
 
 --
@@ -288,6 +302,16 @@ ALTER TABLE `persona`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`idRol`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `persona`
+--
+ALTER TABLE `persona`
+  MODIFY `idPersona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas

@@ -8,7 +8,7 @@ echo "esta aqui";
 // Verifica que se hayan enviado los datos
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST['usuario'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
 
     // Crear instancia de la conexión a la base de datos
     $dbConnection = new Conexion();
