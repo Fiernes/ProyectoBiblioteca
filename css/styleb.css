@@ -143,3 +143,19 @@ color: #fffefb;
 border-left:3px; solid:#ffffff;
 transition: all 0.1s ease-out;
 }
+@media (max-width: 768px) {
+  /* Ocultar la barra de búsqueda */
+  .search {
+    display: none;
+  }
+
+  /* Hacer que el menú se muestre en una columna */
+  nav ul {
+    flex-direction: column;
+  }
+
+  /* Mostrar un icono de menú para activar el menú desplegable */
+  .icons {
+    display: block; /* Asegúrate de tener un icono con esta clase */
+  }
+}
