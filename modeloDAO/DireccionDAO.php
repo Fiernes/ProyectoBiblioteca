@@ -15,15 +15,32 @@ class DireccionDAO {
                 VALUES (?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         
-        // Ejecutar la consulta con los datos del objeto dirección
-        $stmt->execute([
+        // Verifica si la preparación fue exitosa
+        if ($stmt === false) {
+            die('Error al preparar la consulta: ' . $this->conn->error);
+        }
+    
+        // Asocia los parámetros para la consulta (tipo 'i' para entero y 's' para cadena de texto)
+        $stmt->bind_param(
+            'issss', 
             $direccion->getIdPersona(),
             $direccion->getDepartamento(),
             $direccion->getCiudad(),
             $direccion->getColonia(),
             $direccion->getNumeroCasa()
-        ]);
+        );
+        
+        // Ejecutar la consulta
+        $stmt->execute();
+    
+        // Verifica si la ejecución fue exitosa
+        if ($stmt->affected_rows === 0) {
+            return false; // Indica que no se insertó ningún dato
+        }
+    
+        return true;
     }
+    
 
     // Método para obtener una dirección específica de una persona según su ID
     public function obtenerDireccionPorPersona($idPersona) {

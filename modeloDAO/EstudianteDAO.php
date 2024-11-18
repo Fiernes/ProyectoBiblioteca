@@ -14,13 +14,30 @@ class EstudianteDAO {
         $sql = "INSERT INTO estudiante (idEstudiante, idPersona, carrera) VALUES (?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         
-        // Ejecutar la consulta con los datos del objeto estudiante
-        $stmt->execute([
+        // Verifica si la preparación fue exitosa
+        if ($stmt === false) {
+            die('Error al preparar la consulta: ' . $this->conn->error);
+        }
+    
+        // Asocia los parámetros para la consulta (tipo 'i' para enteros y 's' para cadenas)
+        $stmt->bind_param(
+            'iis', 
             $estudiante->getIdEstudiante(),
             $estudiante->getIdPersona(),
             $estudiante->getCarrera()
-        ]);
+        );
+        
+        // Ejecutar la consulta
+        $stmt->execute();
+    
+        // Verifica si la ejecución fue exitosa
+        if ($stmt->affected_rows === 0) {
+            return false; // Indica que no se insertó ningún dato
+        }
+    
+        return true;
     }
+    
 
     // Método para leer un estudiante específico
     public function leerEstudiante($idEstudiante) {

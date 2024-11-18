@@ -12,22 +12,25 @@ class PersonaDAO {
     }
 
     public function obtenerIdMax() {
-        $sql = "SELECT MAX(idPersona) FROM persona";
+        $id = 0;
+        $sql = "SELECT COALESCE(MAX(idPersona), 0) FROM persona";
         $stmt = $this->conn->prepare($sql);  // Prepara la consulta SQL
-    
-        $stmt->execute();  // Ejecuta la consulta
-    
-        // Obtener el resultado
-        $result = $stmt->get_result();
-        $id = 0;  // Inicializa el id en 0 por si no hay resultados
-    
-        // Si existe un resultado, obtiene el valor
-        if ($row = $result->fetch_row()) {
-            $id = $row[0];  // El valor de MAX(id) estará en la primera columna
+        
+        if ($stmt) {
+            $stmt->execute();  // Ejecuta la consulta
+            
+            // Vincular el resultado a una variable
+            $stmt->bind_result($id);
+            $stmt->fetch();  // Recupera el resultado
+            
+            $stmt->close();  // Cierra la declaración preparada
+        } else {
+            $id = 0;  // En caso de error, devolver 0
         }
     
         return $id;  // Devuelve el id
     }
+    
     
 
     public function login($usuario, $pass) {
@@ -58,7 +61,15 @@ class PersonaDAO {
         $sql = "INSERT INTO persona (idPersona, usuario, password, primerNombre, segundoNombre, primerApellido, segundoApellido, DNI) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->execute([
+    
+        // Verifica si la preparación fue exitosa
+        if ($stmt === false) {
+            die('Error al preparar la consulta: ' . $this->conn->error);
+        }
+    
+        // Asocia los parámetros para la consulta
+        $stmt->bind_param(
+            'isssssss', 
             $persona->getIdPersona(),
             $persona->getUsuario(),
             md5($persona->getPassword()),
@@ -67,8 +78,19 @@ class PersonaDAO {
             $persona->getPrimerApellido(),
             $persona->getSegundoApellido(),
             $persona->getDNI()
-        ]);
+        );
+    
+        // Ejecuta la consulta
+        $stmt->execute();
+    
+        // Verifica si la ejecución fue exitosa
+        if ($stmt->affected_rows === 0) {
+            return false; // Indica que no se insertó ningún dato
+        }
+    
+        return true;
     }
+    
 
     public function leerPersona($idPersona) {
         $sql = "SELECT * FROM persona WHERE idPersona = ?";

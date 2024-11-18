@@ -5,7 +5,7 @@ require_once '../modeloDAO/PersonaDAO.php';
 require_once '../modelo/Direccion.php';
 require_once '../modeloDAO/DireccionDAO.php';
 require_once '../modelo/InfoContacto.php';
-require_once '../modeloDAO/infoContactoDAO.php';
+require_once '../modeloDAO/InfoContactoDAO.php';
 require_once '../modelo/Estudiante.php';
 require_once '../modeloDAO/EstudianteDAO.php';
 
@@ -39,33 +39,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Verificar si las contraseñas coinciden
     if ($password === $confirmPassword) {
         $dbConnection = new Conexion();
-        $personaDAO = new PersonaDAO($dbConnection);
-        $direccionDAO = new DireccionDAO($dbConnection);
-        $infoContactoDAO = new InfoContactoDAO($dbConnection);
-        $estudianteDAO = new EstudianteDAO($dbConnection);
-
-        // Obtener el nuevo ID de persona
-        $idPersona = $personaDAO->obtenerIdMax();
-        echo $idPersona;
-
-        // Si $idPersona es null, asigna el valor 1
-        $idPersona = ($idPersona == null) ? 1 : $idPersona;
         
+        // Obtener el nuevo ID de persona
+        $personaDAO = new PersonaDAO($dbConnection);
+        $idPersona = $personaDAO->obtenerIdMax();
+        $idPersona++; // Incrementar el ID de persona
+
+        // Crear las instancias para las tablas correspondientes
         $nuevaPersona = new Persona($idPersona, $usuario, $password, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $dni);
         $nuevaDireccion = new Direccion($idPersona, $departamento, $ciudad, $colonia, $numeroCasa);
         $nuevoContacto = new InfoContacto($idPersona, $correo, $telefono, $telefonoPersonal, $telefonoRespaldo);
         $nuevoEstudiante = new Estudiante($numeroCuenta, $idPersona, $carrera);
 
+        // Intentar registrar en todas las tablas y verificar el éxito de cada operación
+        $registroExitoso = true;
 
-        // Guardar datos y verificar éxito
-        $personaDAO->crearPersona($nuevaPersona);
-        $direccionDAO->crearDireccion($nuevaDireccion);
-        $infoContactoDAO->crearInfoContacto($nuevoContacto);
-        $estudianteDAO->crearEstudiante($nuevoEstudiante);
+        if (!$personaDAO->crearPersona($nuevaPersona)) {
+            $registroExitoso = false;
+        }
+        
+        $direccionDAO = new DireccionDAO($dbConnection);
+        if (!$direccionDAO->crearDireccion($nuevaDireccion)) {
+            $registroExitoso = false;
+        }
 
+        $infoContactoDAO = new InfoContactoDAO($dbConnection);
+        if (!$infoContactoDAO->crearInfoContacto($nuevoContacto)) {
+            $registroExitoso = false;
+        }
+
+        $estudianteDAO = new EstudianteDAO($dbConnection);
+        if (!$estudianteDAO->crearEstudiante($nuevoEstudiante)) {
+            $registroExitoso = false;
+        }
+
+        // Verificar si el registro fue exitoso
         if ($registroExitoso) {
-            header("Location: ../Login.html");
-            exit();
+            echo "<script>alert('Registro exitoso.'); window.location.href='../Login.html';</script>";
+    // O también puedes mostrar un mensaje como:
+    // echo "Registro exitoso. Ahora puedes iniciar sesión.";
+    // Y luego, hacer la redirección después de un pequeño delay, si lo prefieres.
+    // header("Location: ../Login.html"); // Redirigir después de mostrar los echo
+    exit();
         } else {
             echo "<script>alert('Error al registrar el usuario'); window.location.href='../Registro.html';</script>";
         }
@@ -76,4 +91,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: ../Registro.html");
     exit();
 }
-

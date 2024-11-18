@@ -15,15 +15,32 @@ class InfoContactoDAO {
                 VALUES (?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         
-        // Ejecutar la consulta con los datos del objeto infoContacto
-        $stmt->execute([
+        // Verifica si la preparación fue exitosa
+        if ($stmt === false) {
+            die('Error al preparar la consulta: ' . $this->conn->error);
+        }
+    
+        // Asocia los parámetros para la consulta (tipo 'i' para idPersona y 's' para las cadenas)
+        $stmt->bind_param(
+            'issss', 
             $infoContacto->getIdPersona(),
             $infoContacto->getCorreoElectronico(),
             $infoContacto->getTelefonoCasa(),
             $infoContacto->getTelefonoPersonal(),
             $infoContacto->getTelefonoPersonalDos()
-        ]);
+        );
+        
+        // Ejecutar la consulta
+        $stmt->execute();
+    
+        // Verifica si la ejecución fue exitosa
+        if ($stmt->affected_rows === 0) {
+            return false; // Indica que no se insertó ningún dato
+        }
+    
+        return true;
     }
+    
 
     // Método para leer la información de contacto de una persona específica
     public function leerInfoContacto($idPersona) {
