@@ -132,30 +132,28 @@ nav {
   }
   .dropdown-menu_section:hover{
     background-color:#c9cfdb;
-color: #F2A81D;
+color: #faad1d;
 border-left: 3px ;solid:#F2A81D;
 transition: all 0.1s ease-out;
  }
 
  .dropdown-menu_option:hover{
-  background-color:#a74545;
-color: #fffefb;
-border-left:3px; solid:#ffffff;
+  color: #fffefb;
+  border-left:3px; solid:#ffffff;
+  background-color:#ca3f3f;
 transition: all 0.1s ease-out;
 }
 @media (max-width: 768px) {
-  /* Ocultar la barra de búsqueda */
+  
   .search {
     display: none;
   }
 
-  /* Hacer que el menú se muestre en una columna */
   nav ul {
     flex-direction: column;
   }
 
-  /* Mostrar un icono de menú para activar el menú desplegable */
   .icons {
-    display: block; /* Asegúrate de tener un icono con esta clase */
+    display: block; 
   }
 }
