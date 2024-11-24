@@ -1,60 +1,70 @@
+/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
   color: #333;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  padding-top: 80px; /* Espacio para la barra fija */
 }
 
 /* Contenedor del carrito */
 .container {
-  margin-top: 120px; /* Deja espacio para la barra fija */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-h2 {
-  color: #333;
+/* Título del carrito */
+.cart-title h2 {
   font-size: 24px;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  color: #007bff;
 }
 
+.cart-title img {
+  margin-right: 10px;
+}
+
+/* Tabla de libros */
 .table {
   background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .table thead {
-  background-color: #343a40;
+  background-color: #343a40; /* Fondo oscuro */
   color: white;
 }
 
 .table th, .table td {
   text-align: center;
   vertical-align: middle;
+  padding: 10px;
 }
 
+/* Botones */
 .btn-danger, .btn-success {
   font-size: 14px;
   padding: 6px 12px;
   border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.btn-danger {
-  background-color: #dc3545;
-  border-color: #dc3545;
+.btn-danger:hover {
+  background-color: #c82333;
 }
 
-.btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
+.btn-success:hover {
+  background-color: #218838;
 }
 
-.total {
-  margin-top: 20px;
+/* Total de libros */
+.total-books {
   font-size: 18px;
-  text-align: right;
   font-weight: bold;
+  color: #007bff;
 }
