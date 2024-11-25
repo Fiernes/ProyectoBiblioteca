@@ -5,7 +5,7 @@ class Estudiante {
     private $idPersona;
     private $carrera;
     
-    public function __constructFull($idEstudiante, $idPersona, $carrera){
+    public function __construct($idEstudiante, $idPersona, $carrera){
         $this->idEstudiante = $idEstudiante;
         $this->idPersona = $idPersona;
         $this->carrera = $carrera;

@@ -47,9 +47,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Crear las instancias para las tablas correspondientes
         $nuevaPersona = new Persona($idPersona, $usuario, $password, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $dni);
+        echo "$idPersona";
         $nuevaDireccion = new Direccion($idPersona, $departamento, $ciudad, $colonia, $numeroCasa);
+        echo "$idPersona";
         $nuevoContacto = new InfoContacto($idPersona, $correo, $telefono, $telefonoPersonal, $telefonoRespaldo);
+        echo "$idPersona";
         $nuevoEstudiante = new Estudiante($numeroCuenta, $idPersona, $carrera);
+        echo "$idPersona";
 
         // Intentar registrar en todas las tablas y verificar el éxito de cada operación
         $registroExitoso = true;
@@ -67,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!$infoContactoDAO->crearInfoContacto($nuevoContacto)) {
             $registroExitoso = false;
         }
-
+        
         $estudianteDAO = new EstudianteDAO($dbConnection);
         if (!$estudianteDAO->crearEstudiante($nuevoEstudiante)) {
             $registroExitoso = false;
