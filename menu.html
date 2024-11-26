@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
-
     <!-- Enlaces -->
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="icon" href="./imagenes/imagen1.png" type="gif">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-   
   </head>
   <body>
-    <!-- Botón de hamburguesa para la barra lateral -->
-    <button class="hamburger" onclick="toggleSidebar()">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+    <!-- Barra de navegacion -->
+    <iframe src="navegacion.html" style="width: 100%; height: 70px; border: none;"></iframe>
+
+    <!-- Botón de hamburguesa -->
+    <button class="hamburger" onclick="toggleSidebar()" id="hamburger-btn">&#9776;</button>
 
     <!-- Barra lateral -->
     <div class="sidebar" id="sidebar">
@@ -34,119 +28,94 @@
       </div>
     </div>
 
-    <!-- Barra principal -->
-    <nav>
-      <img src=".\imagenes\logo.png" alt="logo" style="width: 70px; height: auto;">
-      <ul>
-        <li><a href="menu.html" class="inicio">Inicio</a></li>
-        <li><a href="PerfilUsuario.html" class="personal">Área personal</a></li>
-        <li><a href="Nosotro.html" class="sobre">Sobre nosotros</a></li>
-      </ul>
-      <div class="search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Buscar">
-      </div>
-      <div class="icons">
-        <a href="carritocom.html" class="boton-carrito">
-          <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-        </a>
-        <i class="fa-solid fa-message"></i>
-        <a href="PerfilUsuario.html" style="text-decoration: none; color: white;">
-        <i class="fa-solid fa-circle-user"></i>
-        </a>
-      </div>
-    </nav>
-
     <!-- Contenido principal -->
     <main>
       <h1>Bienvenido a la Biblioteca</h1>
-      <h3>Aqui hay algunos libros que te pueden interesar</h3>
+      <h3>Aquí hay algunos libros que te pueden interesar</h3>
       <div class="books-grid">
         <div class="book-card">
           <img src=".\imagenes\Metodos_1.jpg" alt="Métodos Cuantitativos I">
           <h4>Métodos Cuantitativos I</h4>
-          <button class="btn-more">Ver más</button>
-          <button onclick="location.href='carritocom.html'" class="btn-cart">
-            <i class="fa fa-shopping-cart"></i>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
         </div>
         <div class="book-card">
           <img src=".\imagenes\Matematica_financiera.jfif" alt="Matemáticas Financieras">
           <h4>Matemáticas Financieras</h4>
-          <button class="btn-more">Ver más</button>
-          <button onclick="location.href='carritocom.html'" class="btn-cart">
-            <i class="fa fa-shopping-cart"></i>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
         </div>
         <div class="book-card">
           <img src=".\imagenes\Mafalda.jpg" alt="Mafalda">
           <h4>Mafalda</h4>
-          <button class="btn-more">Ver más</button>
-          <button onclick="location.href='carritocom.html'" class="btn-cart">
-            <i class="fa fa-shopping-cart"></i>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
         </div>
         <div class="book-card">
-          <img src=".\imagenes\Tecnologia_ informatica.jpg" alt="Tecnologia con enfasis en informatica">
-          <h4>Tecnologia con enfasis en informatica</h4>
-          <button class="btn-more">Ver más</button>
-          <button onclick="location.href='carritocom.html'" class="btn-cart">
-            <i class="fa fa-shopping-cart"></i>
+          <img src=".\imagenes\Tecnologia_ informatica.jpg" alt="Tecnología con énfasis en informática">
+          <h4>Tecnología con énfasis en informática</h4>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
         </div>
         <div class="book-card">
-          <img src=".\imagenes\Atlas_Humano.png" alt="Atlas de anatomia humana">
-          <h4>Atlas de anatomia humana</h4>
-          <button class="btn-more">Ver más</button>
-          <button onclick="location.href='carritocom.html'" class="btn-cart">
-            <i class="fa fa-shopping-cart"></i>
+          <img src=".\imagenes\Atlas_Humano.png" alt="Atlas de anatomía humana">
+          <h4>Atlas de anatomía humana</h4>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
         </div>
-
-        <div class="books-grid">
-          <div class="book-card">
-            <img src=".\imagenes\Historia.jpg" alt="Historia universal">
-            <h4>Historia universal</h4>
-            <button class="btn-more">Ver más</button>
-            <button onclick="location.href='carritocom.html'" class="btn-cart">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-          <div class="book-card">
-            <img src=".\imagenes\Atlantis.jfif" alt="Atlantis">
-            <h4>Atlantis: Proyecto tarsis</h4>
-            <button class="btn-more">Ver más</button>
-            <button onclick="location.href='carritocom.html'" class="btn-cart">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-          <div class="book-card">
-            <img src=".\imagenes\lenguas-extranjeras.jpg" alt="Lenguas extranjeras">
-            <h4>Lenguas extranjeras</h4>
-            <button class="btn-more">Ver más</button>
-            <button onclick="location.href='carritocom.html'" class="btn-cart">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-          <div class="book-card">
-            <img src=".\imagenes\Intro_finanzas.jfif" alt="Introduccion a las Financieras">
-            <h4>Introduccion a las Finanzas</h4>
-            <button class="btn-more">Ver más</button>
-            <button onclick="location.href='carritocom.html'" class="btn-cart">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-          <div class="book-card">
-            <img src=".\imagenes\Derecho_civil.jpg" alt="Derecho Civil">
-            <h4>Derecho Civil: Manual de Derecho de Obligaciones y Contratos</h4>
-            <button class="btn-more">Ver más</button>
-            <button onclick="location.href='carritocom.html'" class="btn-cart">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-        <!-- -->
+        <div class="book-card">
+          <img src=".\imagenes\Historia.jpg" alt="Historia Universal">
+          <h4>Historia Universal</h4>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
+          </button>
+        </div>
+        <div class="book-card">
+          <img src=".\imagenes\Atlantis.jfif" alt="Atlantis: Proyecto Tarsis">
+          <h4>Atlantis: Proyecto Tarsis</h4>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
+          </button>
+        </div>
+        <div class="book-card">
+          <img src=".\imagenes\lenguas-extranjeras.jpg" alt="Lenguas extranjeras">
+          <h4>Lenguas extranjeras</h4>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
+          </button>
+        </div>
+        <div class="book-card">
+          <img src=".\imagenes\Intro_finanzas.jfif" alt="Introducción a las Finanzas">
+          <h4>Introducción a las Finanzas</h4>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
+          </button>
+        </div>
+        <div class="book-card">
+          <img src=".\imagenes\Derecho_civil.jpg" alt="Derecho Civil">
+          <h4>Derecho Civil: Manual de Obligaciones y Contratos</h4>
+          <button class="btn common btn-more">Ver más</button>
+          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+            <i class="fa-sharp fa-solid fa-shopping-cart"></i>
+          </button>
+        </div>
       </div>
     </main>
+    
 
     <!-- Script para la barra lateral -->
     <script src="js/menu.js"></script>
