@@ -144,21 +144,43 @@ th {
 }
 
 .volver-l{
-  background-color: #0E1F40;
+    background-color: #0E1F40;
     padding: 10px 30px;
     text-decoration: none;
     color: #fff;
-    border-radius: 5px; /* Añade esquinas redondeadas */
+    border-radius: 5px; 
     margin-left:40px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     position: absolute;
-    bottom: 20px; /* Ajusta el valor según tu preferencia */
-    right: 20px; /* Ajusta el valor según tu preferencia */
+    bottom: 20px; 
+    right: 20px; 
 }
 
-.volver-l:hover{ background-color: #F2A81D;color:#fff;}
+.volver-l:hover{background-color: #F2A81D;color:#fff;}
 
+.opcion-l{
+  background-color: #0E1F40;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px; 
+  margin-left:20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
+.opcion-l:hover{background-color: #F2A81D;color:#fff;}
 
+/*Vista para registro de libros*/
+
+.contenedor-inventario{
+  padding: 5px 30px;
+  align-items: center; 
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius:5px;
+  margin-top:10%;
+  margin-left:10%;
+  margin-right:10%;
+}
 
 
