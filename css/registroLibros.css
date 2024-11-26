@@ -11,11 +11,23 @@ body {
 
 .container {
     display: flex;
-    height: 600px;
-    width: 800px;
+    height: 800px;
+    width: 1000px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     margin: auto;
     margin-top: 130px;
+}
+
+.contenedor {
+    display: flex;
+    height: 300px;
+    width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 50px;
+
+    /* Centramos los elementos horizontalmente */
+
 }
 
 .info {
@@ -25,12 +37,33 @@ body {
     background-size: cover;
     padding: 150px 50px;
     width: 100%;
+    height: 700px;
+
+}
+
+.info2 {
+    background-image: url(../imagenes/libros-registro-irpf.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 50px;
+    width: 100%;
+    height: 300px;
+
 }
 
 .form {
     padding: 50px 100px;
     width: 100%;
-    height: 600px;
+    height: 800px;
+    text-align: center;
+    background-color: #fff
+}
+
+.form1 {
+    padding: 50px 100px;
+    width: 100%;
+    height: 330px;
     text-align: center;
     background-color: #fff
 }
@@ -55,6 +88,34 @@ body {
     flex-direction: column;
 }
 
+select {
+    cursor: pointer;
+    outline: none;
+    border-color: #ecc100;
+    border-width: 0px 0px 0px 5px;
+    border-style: solid;
+    padding: 15px 35px;
+    margin-bottom: 20px;
+    background-color: #F9F9F9;
+
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    /* Ajusta el ancho según tus necesidades */
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Evita que se capture el clic */
+}
+
 .box {
     outline: none;
     border-color: #ecc100;
@@ -63,6 +124,49 @@ body {
     padding: 15px 35px;
     margin-bottom: 20px;
     background-color: #F9F9F9;
+}
+
+.box1 {
+    outline: none;
+    border-color: #ecc100;
+    border-width: 0px 0px 0px 5px;
+    border-style: solid;
+    padding: 15px 35px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    background-color: #F9F9F9;
+}
+
+.archive {
+    outline: none;
+    border-color: #0d0855;
+    border-width: 0px 0px 0px 5px;
+    border-style: solid;
+    padding: 15px 35px;
+    margin-top: 575px;
+    background-color: #fdeaea;
+
+}
+
+.categoria {
+    background-color: #e60000;
+    padding: 15px;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.categoria:hover {
+    background-color: #b60505;
+    transition: background-color 0.50s ease;
+    color: #f2eadf;
 }
 
 .submit {
@@ -146,25 +250,51 @@ img {
 
 }
 
-/*respnsive*/
-@media(max-width:990px) {
+/* Default styles for all devices */
+.container {
+    width: 1000px;
+}
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
     .container {
-        width: 450px;
-        height: 600px;
-        margin-top: 100px;
+        width: 90%;
+        margin: auto;
     }
 
+    .form,
+    .form1 {
+        padding: 20px;
+    }
 
+    .info,
+    .info2 {
+        padding: 100px;
+    }
 
-    
+    .box,
+    .box1 {
+        font-size: 16px;
+    }
 
-    .form {
+    .submit,
+    .categoria {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .info {
+        display: flexbox;
         width: 100%;
-        padding: 30px;
+        height: auto;
+        min-height: max-content;
     }
+}
 
-    .form h2 {
-        margin-top: 40px;
+@media (max-width: 650px) {
+    .info {
+        display: none;
+        /* Oculta la sección .info en pantallas más grandes */
     }
 }
 
