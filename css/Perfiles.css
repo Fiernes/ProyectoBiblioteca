@@ -70,7 +70,7 @@ body{background-color: #F2EADF; font-size:20px;}
   .Regreso:hover{background-color:#0E1F40;color:#fff;}
 
   /*Titulo indicando si es el perfil Administrador o Empleado*/
-  .Tittle{margin-left:7%;}
+  .Tittle{margin-left:7%; margin-top:4%;}
 
   .perfil-avatar { /*Imagen de perfil en la vista*/
     color:#fff;
@@ -85,12 +85,13 @@ body{background-color: #F2EADF; font-size:20px;}
 .san-bar{float: right; margin-right:5%;}
 
 .search-input {
-    border: none;
+    border: solid;
+    border-color:#e1e1e1;
     outline: none; 
     padding: 10px;
     font-size: 16px;
     border-radius: 5px; /* Añade esquinas redondeadas */
-}
+}   
 
 .search-input:hover{border: 2px solid #007bff;}
 
@@ -111,7 +112,7 @@ body{background-color: #F2EADF; font-size:20px;}
   justify-content: space-between;
   border: 1px solid;
   border-radius:5px;
-  padding:10px 30px;
+  padding:10px 20px;
   margin-top:10%;
   margin-left:5%;
   margin-right:5%;
@@ -182,5 +183,8 @@ th {
   margin-left:10%;
   margin-right:10%;
 }
+
+/*Reglas en la vista Gestión de Inventarios - tabla vista de libros*/
+
 
 
