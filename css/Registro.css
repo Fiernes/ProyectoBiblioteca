@@ -17,6 +17,14 @@ body {
     margin: auto;
     margin-top: 100px;
     
+    /* Responsive adjustments */
+    @media (max-width: 1400px) {
+        width: 85%;
+        
+        
+    }
+
+    
 }
 
 .info {
@@ -150,25 +158,13 @@ img {
     
 }
 
-/*responsive*/
-@media(max-width:990px) {
-    .container {
-        width: 350px;
-        height: 600px;
-        margin-top: 100px;
-    }
 
-    
-    .info{ display: none;
-    }
 
-    .form {
-        width: 100%;
-        padding: 30px;
-    }
-
-    .form h2 {
-        margin-top: 40px;
+@media (max-width: 800px) {
+    .info {
+        display:none   ; /* Oculta la sección .info en pantallas más grandes */
     }
 }
+
+
 

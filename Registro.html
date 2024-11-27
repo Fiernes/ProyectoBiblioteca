@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro </title>
-    <link rel="stylesheet" href="css/Registro.css" />
+    <link rel="stylesheet" href="./css/Registro.css" />
     <link rel="icon" href="./imagenes/imagen1.png" type="gif">
 </head>
 
@@ -15,6 +15,18 @@
         function redireccion() {
             window.location.href = "index.html";
         }
+
+        function validateForm() {
+    const password = document.getElementsByName("password")[0].value;
+    const confirmPassword = document.getElementsByName("confirmPassword")[0].value;
+
+    if (password!== confirmPassword) {
+        alert("Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.");
+        return false;
+    }
+
+    return true;
+}
     </script>
 
     <nav>
@@ -31,11 +43,13 @@
 
     </nav>
 
+    
+    
     <div class="container">
         <div class="info">
 
         </div>
-
+        
         <form class="form" action="./controlador/ContRegistroEstu.php" method="POST" onsubmit="return validateForm()">
             <h2>REGISTRO</h2>
             <p>El conocimiento jamás había estado tan cerca.</p>
@@ -51,16 +65,7 @@
                 <input type="text" name="usuario" class="box" placeholder="Ingresa un nombre de usuario" required>
                 <input type="password" name="password" class="box" placeholder="Ingresa una contraseña" required>
                 <input type="password" name="confirmPassword" class="box" placeholder="Confirma la contraseña" required>
-                <input type="text" name="departamento" class="box" placeholder="Ingresa tu departamento" required>
-                <input type="text" name="ciudad" class="box" placeholder="Ingresa tu ciudad" required>
-                <input type="text" name="colonia" class="box" placeholder="Ingresa tu colonia" required>
-                <input type="text" name="numeroCasa" class="box" placeholder="Ingresa tu número de casa" required>
-                <input type="text" name="correo" class="box" placeholder="Ingresa tu correo" required>
-                <input type="text" name="telefono" class="box" placeholder="Ingresa tu teléfono" required>
-                <input type="text" name="telefonoPersonal" class="box" placeholder="Ingresa tu teléfono personal"
-                    required>
-                <input type="text" name="telefonoRespaldo" class="box" placeholder="Ingresa otro teléfono de respaldo"
-                    required>
+                
                 <input type="submit" value="Registrate" class="submit">
             </div>
         </form>
