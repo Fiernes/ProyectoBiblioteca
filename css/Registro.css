@@ -151,20 +151,25 @@ img {
 }
 
 /*responsive*/
-@media(max-width:990px) {
+@media(max-width:1200px) {
     .container {
-        width: 350px;
-        height: 600px;
+        width: 600px;
+        min-height: auto;
         margin-top: 100px;
     }
 
     
-    .info{ display: none;
+    .info{ 
+        display:flexbox;
+        width: 100%;
+        height: auto;
+        min-height: max-content;
     }
 
     .form {
         width: 100%;
         padding: 30px;
+        max-height: max-content;
     }
 
     .form h2 {
@@ -172,3 +177,8 @@ img {
     }
 }
 
+@media (max-width: 650px) {
+    .info {
+        display: none; /* Oculta la sección .info en pantallas más grandes */
+    }
+}

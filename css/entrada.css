@@ -9,7 +9,6 @@ body{
     background-image: url("../imagenes/fondoEntrada3.jpg");
     width: 100%;
     min-height: 100vh;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +27,7 @@ body{
     margin: 20px auto;
     width: 60%; 
     background: transparent;
-    flex-wrap: wrap;
+    
     backdrop-filter: blur(45px);
     
 }
@@ -36,7 +35,7 @@ body{
 h2 {
     font-size: 3rem;
     font-weight: bold;
-    color:#ffffff;
+    color: #ffffff;
     margin: 0;
     text-align: justify;
     
@@ -91,7 +90,7 @@ nav a:hover {
     color: rgb(0, 0, 0);
     border-radius: 8px;
     cursor: pointer;
-    margin-left: 900px;
+    margin-left: 700px;
     width: 100px; 
     height: 50px;
     padding: 14px 16px;
@@ -131,23 +130,3 @@ nav a:hover {
 img{
     margin-left: 20px;
 }
-
-/*responsive*/
-@media(max-width:1100px) {
-        
-    .login-registro{
-        margin-left: 5px;
-    }
-
-    .login-button{
-        margin-left: auto;
-    }
-    .contenedor-cuadrado{
-        min-width: none;
-        height: 500px;
-        margin-top: 150px;
-    }
-
-    
-}
-

@@ -76,6 +76,9 @@
       </h2>
       <p class="mt-2 text-secondary">Usuario: <strong>Nombre de Usuario</strong></p>
     </div>
+    <div class="text-center mt-4">
+      <p id="carrito-estado" class="badge badge-info">Estado: Pendiente</p>
+    </div>
     <div class="table-responsive mt-4">
       <table class="table table-striped">
         <thead>
@@ -99,7 +102,6 @@
             <td>Bueno</td>
             <td>
               <button class="btn btn-danger btn-sm">Eliminar</button>
-              <button class="btn btn-success btn-sm">Guardar</button>
             </td>
           </tr>
           <tr>
@@ -111,7 +113,6 @@
             <td>Malo</td>
             <td>
               <button class="btn btn-danger btn-sm">Eliminar</button>
-              <button class="btn btn-success btn-sm">Guardar</button>
             </td>
           </tr>
         </tbody>
@@ -120,6 +121,18 @@
     <div class="text-right mt-3">
       <p class="total-books">Total de libros a prestar: 2</p>
     </div>
+    <div class="text-center mt-4">
+      <button id="solicitar-btn" class="btn btn-primary">Solicitar</button>
+    </div>
   </div>
+
+  <script>
+    document.getElementById('solicitar-btn').addEventListener('click', function() {
+      const estadoCarrito = document.getElementById('carrito-estado');
+      estadoCarrito.textContent = 'Estado: Enviado';
+      estadoCarrito.classList.remove('badge-info');
+      estadoCarrito.classList.add('badge-success');
+    });
+  </script>
 </body>
 </html>

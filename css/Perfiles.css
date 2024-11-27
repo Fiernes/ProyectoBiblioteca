@@ -1,61 +1,36 @@
-body{
-  background-color: #F2EADF;
-  font-size:20px;
+body{background-color: #F2EADF; font-size:20px;}
 
-}
+  .barra-perfil{
+      margin-top:10%;
+      margin-left:5%;
+      margin-right:5%;
+      border: 1px solid #000;
+      height:50px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:60px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
 
-/*header{
-    background-color: #1633A4;
-    padding: 10px 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    position:fixed;
-
-
-}*/
-
-.MPerfil { 
-    margin-top:10%; /*separa el bloque de perfil de la barra de navegación*/
-    margin-right:5%; /*separa a los lados*/
-    margin-left: 5%; /*separa a los lados*/
-    height: 90px;
-    box-sizing: border-box;
-    background-color: #F2A81D;
-    display: flex; /* Para organizar los elementos en línea */
-    align-items: center; /* Centra verticalmente el contenido */
-    padding: 50px; /* Añade espacio a los lados */
-    border-radius: 5px; /* Añade esquinas redondeadas */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
-    text-align: center;
   }
   
-  /*Esto es el texto: Hugo Díaz que es opcional nada más para mostrar en el prototipado*/
-  .Decoration {
-    font-size: 30px; /* Ajusta el tamaño de la fuente */
-    font-weight: bold; /* Agrega negrita al nombre */
-    margin-top: 10px; /* Añade espacio entre la imagen y el nombre */
-    color:#000;
-    text-align: center; /* Centra el texto horizontalmente */
-    position: relative; /* Necesario para usar top */
-    top:-20px;
-    left: 5%;
-   
-   
-  }
+  /*Para el nombre de usuario dentro del div barra perfil*/
+  .nombre-perfil{font-size:40px;}
   
-  .Mostrar { /*botón dentro del div MPerfil que dice mostrar perfil.*/
+  
+  .Mostrar { /*botón dentro del div barra-perfil que dice mostrar perfil.*/
     background-color: #BF303C;
     margin-top:10px;
-    padding: 10px 30px; /* Ajusta el relleno */
+    padding: 10px 30px; 
     text-decoration: none;
     color: #fff;
-    border-radius: 5px; /* Añade esquinas redondeadas */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
-    margin-left:800px;
-    
-    
+    border-radius: 5px; /* hace las esquinas redondeadas*/
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); 
+    margin-left: auto;
   }
+
+  .Mostrar:hover{background-color:#0E1F40;color:#fff;}
 
   .opcion{ /*Cada una de las opciones dentro de la vista perfil sea de Administrador o Empleado*/
     margin: 5%;
@@ -64,62 +39,148 @@ body{
     background-color: #F2A81D;
     display: flex; /* Para organizar los elementos en línea */
     align-items: center; /* Centra verticalmente el contenido */
-    padding: 0 20px; /* Añade espacio a los lados */
+    padding: 30px 20px; /* Añade espacio a los lados */
     border-radius: 5px; /* Añade esquinas redondeadas */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
-    
-
+    text-align: center;
   }
 
-  .opcion i{
-  font-size:55px;
 
-  }
+.opcion:hover {cursor: pointer;border: 2px solid #007bff;}
 
-  .Label{ /*El nombre de las opciones*/
-    margin-left:300px;
-    font-size: 25pt;
-    text-decoration: none;
-    color:#000000;
-  }
+.opcion a {text-decoration: none;color: inherit;width: 100%;height: 100%;}
 
-  .Regreso{ /*botón volver*/
+/*Cambia tamaño de iconos en las opciones de la vista admin y empleado*/
+
+.opcion i{ font-size:55px;}
+
+.Label{ /*El nombre de las opciones*/font-size: 25pt;text-decoration: none;color:#000000;}
+
+.Regreso{ /*botón volver*/
     background-color: #BF303C;
-    padding: 10px 30px; /* Ajusta el relleno */
+    padding: 10px 30px;
     text-decoration: none;
     color: #fff;
     border-radius: 5px; /* Añade esquinas redondeadas */
     margin-left:40px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
-   
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+     
   }
 
-  .Tittle{ /*Titulo indicando si es el perfil Administrador o Empleado*/
-   margin-left:7%;
-  }
+  .Regreso:hover{background-color:#0E1F40;color:#fff;}
 
-  .perfil-avatar {
+  /*Titulo indicando si es el perfil Administrador o Empleado*/
+  .Tittle{margin-left:7%;}
+
+  .perfil-avatar { /*Imagen de perfil en la vista*/
     color:#fff;
-    width: 69px; /* Ajusta el tamaño de la imagen */
-    height: 69px;
+    width: 89px; /* Ajusta el tamaño de la imagen */
+    height: 89px;
     border-radius: 50%; /* Redondea la imagen para un efecto de avatar */
   }
 
-<<<<<<< HEAD
-  /*icono de carrito*/
-  .icons .fa-cart-shopping {
-    color: white; 
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .icons .fa-cart-shopping:hover {
+
+  /*Para vista logs del sistema*/
+
+.san-bar{float: right; margin-right:5%;}
+
+.search-input {
+    border: none;
+    outline: none; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px; /* Añade esquinas redondeadas */
+}
+
+.search-input:hover{border: 2px solid #007bff;}
+
+.search-button {
+    background-color: #0E1F40;
     color: white;
-    transform: scale(1.3);
-    filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5));
-  }
-=======
-  
->>>>>>> 1fad9c87dd737690b36114f1234d27bb13285061
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-button:hover{background-color:#F2A81D; color:#fff;}
+
+.contenedor-l{
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius:5px;
+  padding:10px 30px;
+  margin-top:10%;
+  margin-left:5%;
+  margin-right:5%;
+}
+
+.contenedor-l i{font-size:55px;}
+
+/*Tabla logs*/
+table {
+  border-collapse: collapse;
+  width: 80%;
+  background:#fff;
+  margin-top: 30px;
+  margin-left:9%;
+  margin-right:5%;
+
+}
+
+th, td {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+td:hover{background-color:#bcbcbc}
+
+th {
+  background-color: #0E1F40;
+  color: white;
+}
+
+.volver-l{
+    background-color: #0E1F40;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px; 
+    margin-left:40px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+}
+
+.volver-l:hover{background-color: #F2A81D;color:#fff;}
+
+.opcion-l{
+  background-color: #0E1F40;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px; 
+  margin-left:20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.opcion-l:hover{background-color: #F2A81D;color:#fff;}
+
+/*Vista para registro de libros*/
+
+.contenedor-inventario{
+  padding: 5px 30px;
+  align-items: center; 
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius:5px;
+  margin-top:10%;
+  margin-left:10%;
+  margin-right:10%;
+}
 
 
-  
