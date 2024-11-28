@@ -17,16 +17,27 @@
         }
 
         function validateForm() {
-    const password = document.getElementsByName("password")[0].value;
-    const confirmPassword = document.getElementsByName("confirmPassword")[0].value;
+            const password = document.getElementsByName("password")[0].value;
+            const confirmPassword = document.getElementsByName("confirmPassword")[0].value;
+            const
+                dni = document.getElementsByName("dni")[0].value;
+            const numerocuenta = document.getElementsByName("numerocuenta")[0].value;
 
-    if (password!== confirmPassword) {
-        alert("Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.");
-        return false;
-    }
+            // Validación de contraseñas
+            if (password !== confirmPassword) {
+                alert("Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.");
+                return false;
+            }
 
-    return true;
-}
+            // Validación de DNI y número de cuenta (solo números)
+            if (!/^\d+$/.test(dni) || !/^\d+$/.test(numerocuenta)) {
+                alert("El DNI y el número de cuenta deben contener solo números.");
+                return false;
+            }
+
+            return true;
+        }
+    
     </script>
 
     <nav>
@@ -43,13 +54,13 @@
 
     </nav>
 
-    
-    
+
+
     <div class="container">
         <div class="info">
 
         </div>
-        
+
         <form class="form" action="./controlador/ContRegistroEstu.php" method="POST" onsubmit="return validateForm()">
             <h2>REGISTRO</h2>
             <p>El conocimiento jamás había estado tan cerca.</p>
@@ -65,7 +76,7 @@
                 <input type="text" name="usuario" class="box" placeholder="Ingresa un nombre de usuario" required>
                 <input type="password" name="password" class="box" placeholder="Ingresa una contraseña" required>
                 <input type="password" name="confirmPassword" class="box" placeholder="Confirma la contraseña" required>
-                
+
                 <input type="submit" value="Registrate" class="submit">
             </div>
         </form>
