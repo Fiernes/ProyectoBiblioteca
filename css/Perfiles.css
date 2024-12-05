@@ -72,6 +72,8 @@ body{background-color: #F2EADF; font-size:20px;}
   /*Titulo indicando si es el perfil Administrador o Empleado*/
   .Tittle{margin-left:7%; margin-top:4%;}
 
+  .Tittle-l{margin-left:7%; margin-top:8%;}
+
   .perfil-avatar { /*Imagen de perfil en la vista*/
     color:#fff;
     width: 89px; /* Ajusta el tamaño de la imagen */
@@ -113,12 +115,13 @@ body{background-color: #F2EADF; font-size:20px;}
   border: 1px solid;
   border-radius:5px;
   padding:10px 20px;
-  margin-top:10%;
+  margin-top:5%;
   margin-left:5%;
   margin-right:5%;
 }
 
 .contenedor-l i{font-size:55px;}
+
 
 /*Tabla logs*/
 table {
@@ -186,5 +189,37 @@ th {
 
 /*Reglas en la vista Gestión de Inventarios - tabla vista de libros*/
 
+/*Aside de la vista Estadística*/
 
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #0E1F40;
+  /*display: flex;*/
+  flex-direction: column;
+  margin-top:74px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); 
+}
+
+/*Uso de IA con gemini*/
+.sidebar a {
+  display: block;
+  padding: 10px 20px; /* El primer valor es para arriba y abajo, el segundo para izquierda y derecha */
+  text-align: center;
+  text-decoration: none;
+  background-color:#0E1F40;
+  color:#fff;
+  
+}
+
+
+.sidebar a:hover {
+  background-color: #F2A81D;
+  text-decoration: none;
+  color:#0E1F40;
+}
+
+#xd:hover{background:#BF303C; color:#fff;}

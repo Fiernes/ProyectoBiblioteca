@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro Libros </title>
+    <title>Gestión de Inventario</title>
     <link rel="stylesheet" href="../css/barranav.css">
     <link rel="stylesheet" href="./css/registroLibros.css" />
     <link rel="stylesheet" href="./css/Perfiles.css">
@@ -42,53 +42,8 @@
 
 <body>
 
-    <nav>
-        <img src=".\imagenes\logo.png" alt="logo" style="width: 70px; height: auto;">
-        <ul>
-            <li><a href="index.html" class="inicio">Inicio</a></li>
-            <li><a href="menu.html" class="personal">Menu</a></li>
-            <li><a href="Nosotro.html" class="sobre">Sobre nosotros</a></li>
-        </ul>
-        <div class="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="search">
-        </div>
-        <div class="icons">
-            <a href="carritocom.html" class="boton-carrito">
-                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            </a>
-            <i class="fa-solid fa-message"></i>
-            <i class="fa-solid fa-circle-user" data-toggle="dropdown" aria-expanded="false"></i>
-            <div class="dropdown-menu dropdown-menu--lg">
-                <div class="dropdown-menu_header">
-                    <span class="dropdown-menu__username">Usuario</span>
-                    <img src="../ProyectoBiblioteca/imagenes/OIP.jpg" class="float-right" alt="foto de perfil">
-                </div>
-                <div>
-                    <div class="dropdown-menu_section">
-                        <a href="PerfilUsuario.html" class="boton-perfil">
-                            <div class="p-2 text-center">
-                                <span> Pefil</span>
-                                <i class="fa-solid fa-user-pen float-right mr-5"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="dropdown-menu_section">
-                        <a href="historialUsuario.html">
-                            <div class="p-2 text-center">
-                                <span> Historial</span>
-                                <i class="fa-brands fa-readme float-right mr-5"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="dropdown-menu_option">
-                        <a href="Login.html">
-                            <div class="p-2 text-center">
-                                <div>Cerrar sesión</div>
-                            </div>
-                        </a>
-                    </div>
-    </nav>
+    <!--Div para traer barra de navegación-->
+    <div id="nav-container"></div> 
 
     <div class="container">
         <div class="info">
@@ -138,6 +93,8 @@
     </div>
 
     <br>
+
+    <script src="js/barra.js"></script>
 </body>
 
 </html>
