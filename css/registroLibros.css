@@ -11,7 +11,7 @@ body {
 
 .container {
     display: flex;
-    height: 1000px;
+    height: 1150px;
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     margin: auto;
@@ -32,18 +32,25 @@ body {
     margin-top: 50px;
     margin-bottom: 40px;
     border-color: #000000;
+
     /* Centramos los elementos horizontalmente */
     @media (max-width: 1300px) {
         width: 85%;
     }
 
-    
+
 }
 
 @media (max-width: 850px) {
     .info {
-        display:none   ; /* Oculta la sección .info en pantallas más grandes */
+        display: none;
+        /* Oculta la sección .info en pantallas más grandes */
     }
+}
+
+#imagePreview img {
+    max-height: 280px;
+    /* Ajusta el ancho máximo según tus necesidades */
 }
 
 .info {
@@ -52,8 +59,8 @@ body {
     background-repeat: no-repeat;
     padding: 50px 50px;
     width: 500px;
-    max-height:none;
-    
+    max-height: none;
+
 }
 
 .info2 {
@@ -75,7 +82,6 @@ body {
     height: 900px;
     text-align: center;
     background-color: #fff
-
 }
 
 .form1 {
@@ -84,7 +90,6 @@ body {
     height: 320px;
     text-align: center;
     background-color: #fff
-    
 }
 
 .form h2 {
@@ -146,12 +151,17 @@ select {
 }
 
 h4 {
-    color: #333; /* Color del texto */
-    font-family: Arial, sans-serif; /* Fuente */
-    font-size: 18px; /* Tamaño de la fuente */
-    text-align: center; /* Alineación del texto */
-    margin: top 80%;;
-  } 
+    color: #333;
+    /* Color del texto */
+    font-family: Arial, sans-serif;
+    /* Fuente */
+    font-size: 18px;
+    /* Tamaño de la fuente */
+    text-align: center;
+    /* Alineación del texto */
+    margin: top 80%;
+    ;
+}
 
 .box1 {
     outline: none;
@@ -173,7 +183,7 @@ h4 {
     margin-top: 575px;
     background-color: #fdeaea;
 
-    
+
 }
 
 .categoria {

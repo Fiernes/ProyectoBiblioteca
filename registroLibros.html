@@ -84,13 +84,35 @@
                             if (!validImageTypes.includes(fileType)) {
                                 Swal.fire({
                                     icon: 'error',
-                                    title: 'Oops...',
+                                    title: 'Jummm...',
                                     text: 'Por favor, selecciona un archivo PNG, JPEG o JPG.',
                                 })
                                 myFile.value = ''; // Limpiar el input
                             }
                         }
                     });
+                </script>
+                <div id="imagePreview"></div>
+
+                <script>
+                    const imageUpload = document.getElementById('myFile');
+                    const imagePreview = document.getElementById('imagePreview');
+
+                    imageUpload.addEventListener('change', () => {
+                        const file = imageUpload.files[0];
+                        if (file) {
+                            const reader = new FileReader();
+
+                            reader.onload = (e) => {
+                                imagePreview.innerHTML = `<img src="${e.target.result}" alt="Imagen Previsualización">`;
+                            };
+
+                            reader.readAsDataURL(file);
+                        } else {
+                            imagePreview.innerHTML = '';
+                        }
+                    });
+
                 </script>
                 <input type="submit" value="Ingresar" class="submit">
 
