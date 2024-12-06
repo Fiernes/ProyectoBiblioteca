@@ -16,6 +16,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./registroLibros.js"></script>
+    <script src="./previa.js"></script>
 
 
 
@@ -39,16 +40,36 @@
 </head>
 
 </head>
+<script>
+    const myFile = document.getElementById('myFile');
+    const imagePreview = document.getElementById('imagePreview');
+
+    myFile.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                imagePreview.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        } else {
+            imagePreview.src = "";
+        }
+    });</script>
 
 <body>
 
     <!--Div para traer barra de navegación-->
-    <div id="nav-container"></div> 
+    <div id="nav-container"></div>
 
     <div class="container">
-        <div class="info">
-            <input type="file" class="archive" required>
-        </div>
+
+
+
+
 
         <form class="form" onsubmit="return validateLibroForm()">
             <h2>REGISTRO LIBROS</h2>
@@ -58,20 +79,23 @@
                 <input type="primerNombre" class="box" placeholder="Ingrese el titulo" required>
                 <input type="text" class="box" placeholder="Ingrese el autor" required>
                 <input type="date" class="box" placeholder="Año de publicacion" required>
-                <div class="custom-select">
-                    <select id="mySelect" required>
-                        <option value="cat1">Elige tu categoria</option>
-                        <option value="cat1">cat1</option>
-                        <option value="cat2">cat2</option>
-                    </select>
-
-                </div>
+                <select name="miLista" id="miLista" class="box">
+                    <option value="valor1">Opción 1</option>
+                    <option value="valor2">Opción 2</option>
+                    <option value="valor3" selected>Elija su categoria </option>
+                </select>
                 <input type="cantidadDisponible" class="box" placeholder="Cantidad disponible" required>
                 <input type="estado" class="box" placeholder="Estado" required>
+                <input type="file" id="myFile" class="box" accept="image/*" required>
+
                 <input type="submit" value="Ingresar" class="submit">
 
             </div>
         </form>
+
+        <div class="info">
+
+        </div>
     </div>
 
     <div class="contenedor">
