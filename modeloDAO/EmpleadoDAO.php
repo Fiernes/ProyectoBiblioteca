@@ -1,5 +1,7 @@
 <?php
 
+require_once '../modelo/Empleado.php';
+
 class EmpleadoDAO {
 
     private $conn;
@@ -27,12 +29,12 @@ class EmpleadoDAO {
     }
 
     // Método para obtener los detalles de un empleado específico
-    public function obtenerEmpleadoPorId($idEmpleado) {
-        $sql = "SELECT * FROM empleado WHERE idEmpleado = ?";
+    public function obtenerEmpleadoPorId($idPersona) {
+        $sql = "SELECT * FROM empleado WHERE idPersona = ?";
         $stmt = $this->conn->prepare($sql);
         
         // Vincular el parámetro ID del empleado y ejecutar la consulta
-        $stmt->bind_param("i", $idEmpleado);
+        $stmt->bind_param("i", $idPersona);
         $stmt->execute();
 
         // Obtener el resultado y construir un objeto Empleado

@@ -9,7 +9,7 @@ class Libro {
    private $cantidadDisponible;
    private $estado;
    
-   public function __constructFull($idLibro, $titulo, $autor, $yearPublicacion, $categoria, $cantidadDisponible, $estado) {
+   public function __construct($idLibro, $titulo, $autor, $yearPublicacion, $categoria, $cantidadDisponible, $estado) {
        $this->idLibro = $idLibro;
        $this->titulo = $titulo;
        $this->autor = $autor;

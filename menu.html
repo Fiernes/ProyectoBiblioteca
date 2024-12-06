@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
     <!-- Enlaces -->
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="./css/menu.css">
   </head>
   <body>
     <!-- Barra de navegacion -->
-    <iframe src="navegacion.html" style="width: 100%; height: 70px; border: none;"></iframe>
+    <?php include('nav.php'); ?>
 
     <!-- Botón de hamburguesa -->
     <button class="hamburger" onclick="toggleSidebar()" id="hamburger-btn">&#9776;</button>
@@ -34,7 +34,7 @@
       <h3>Aquí hay algunos libros que te pueden interesar</h3>
       <div class="books-grid">
         <div class="book-card">
-          <img src=".\imagenes\Metodos_1.jpg" alt="Métodos Cuantitativos I">
+          <img src="./imagenes/Metodos_1.jpg" alt="Métodos Cuantitativos I">
           <h4>Métodos Cuantitativos I</h4>
           <button class="btn common btn-more">Ver más</button>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">

@@ -1,16 +1,19 @@
 .hero {
-    background-image: url('../imagenes/hans-jurgen-weinhardt-FZ5nx86tP2U-unsplash.jpg');
+    background-image: url('../imagenes/fondoNOs.avif');
     background-size: cover;
     background-position: center;
-    height: 300px; /* Ajusta esta altura según sea necesario */
+    height: 400px; /* Ajusta esta altura según sea necesario */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
 .hero-content h1 {
-    color: white;
-    font-size: 80px; /* Ajusta el tamaño de fuente según tus preferencias */
+    color: rgb(0, 0, 0);
+    font-size: 100px; /* Ajusta el tamaño de fuente según tus preferencias */
+    margin-left: -35%;
+    
 }
 /* Estilos generales */
 body {
@@ -46,3 +49,108 @@ p {
     margin-top: 30px;
 }
 
+nav {
+    background-color: #cfcece;
+    border-radius: 30px;
+    border-color: #060d1b;
+    position: fixed;
+    top: 20px;
+    width: 95%; 
+    display: flex;
+    margin-bottom: 200px;
+    padding: 5px;
+
+
+}
+
+nav a {
+
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+nav a:hover {
+    background-color: #131453;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.80s ease;
+    /* Transición suave para el cambio de color de fondo */
+    border-radius: 8px;
+}
+
+.login-button {
+    font-weight: bold;
+    background-color: #d41e2d;
+    border-color: #d41e2d;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    cursor: pointer;
+    float: left;
+    width: 100px;
+    height: 50px;
+    padding: 14px 16px;
+    font-size: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    right: 170px;
+
+}
+
+.login-button:hover {
+    background-color: #a01b1b;
+    transition: background-color 0.50s ease;
+}
+
+
+.login-registro {
+    font-weight: bold;
+    background-color: #3d3d3d;
+    color: rgb(235, 235, 235);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100px;
+    height: 50px;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 15px;
+    border-color: #3d3d3d;
+    position: absolute;
+    right: 60px;
+}
+
+.login-registro:hover {
+    background-color: #19125c;
+    transition: background-color 0.50s ease;
+}
+
+img {
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #4e4d4d;
+    /* Color de fondo */
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+.social-media a {
+    color: #ffffff;
+    margin: 0 5px;
+    font-size: 24px;
+    margin-top: 10px;
+}

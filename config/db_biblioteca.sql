@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2024 a las 18:45:39
+-- Tiempo de generación: 06-12-2024 a las 17:24:02
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,6 +47,17 @@ CREATE TABLE `carrito_prestamo` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `idCategoria` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `direccion`
 --
 
@@ -57,13 +68,6 @@ CREATE TABLE `direccion` (
   `colonia` varchar(50) DEFAULT NULL,
   `numeroCasa` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `direccion`
---
-
-INSERT INTO `direccion` (`idPersona`, `departamento`, `ciudad`, `colonia`, `numeroCasa`) VALUES
-(1, 'Francisco morazan', 'tegucigalpa', 'la trinidad', '12');
 
 -- --------------------------------------------------------
 
@@ -80,6 +84,14 @@ CREATE TABLE `empleado` (
   `idPersona` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `empleado`
+--
+
+INSERT INTO `empleado` (`idEmpleado`, `tipoEmpleado`, `puesto`, `departamento`, `horarioLaboral`, `idPersona`) VALUES
+(1, 'Administrativo', 'Asistente Operativo 1', 'Estrategia laboral', '8:00 am - 3:00 pm', 2),
+(2, 'Administrativo', 'Asistente operativo 2', 'Efectividad', '8:00 am - 3:00 pm', 3);
+
 -- --------------------------------------------------------
 
 --
@@ -90,6 +102,14 @@ CREATE TABLE `empleado_rol` (
   `idEmpleado` int(11) NOT NULL,
   `idRol` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `empleado_rol`
+--
+
+INSERT INTO `empleado_rol` (`idEmpleado`, `idRol`) VALUES
+(1, 1),
+(2, 2);
 
 -- --------------------------------------------------------
 
@@ -102,6 +122,13 @@ CREATE TABLE `estudiante` (
   `idPersona` int(11) DEFAULT NULL,
   `carrera` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `estudiante`
+--
+
+INSERT INTO `estudiante` (`idEstudiante`, `idPersona`, `carrera`) VALUES
+('20171031307', 1, 'informatica Administrativa');
 
 -- --------------------------------------------------------
 
@@ -117,6 +144,19 @@ CREATE TABLE `historial_prestamo` (
   `idEstudiante` varchar(12) DEFAULT NULL,
   `idLibro` int(11) DEFAULT NULL,
   `idMulta` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `imagen_libro`
+--
+
+CREATE TABLE `imagen_libro` (
+  `idLibro` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `tipo` varchar(50) NOT NULL,
+  `contenido` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -144,7 +184,7 @@ CREATE TABLE `libros` (
   `titulo` varchar(50) DEFAULT NULL,
   `autor` varchar(50) DEFAULT NULL,
   `yearPublicacion` date DEFAULT NULL,
-  `categoria` varchar(50) DEFAULT NULL,
+  `categoria` int(11) NOT NULL,
   `cantidadDisponible` int(11) DEFAULT NULL,
   `estado` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -199,7 +239,9 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`idPersona`, `usuario`, `password`, `primerNombre`, `segundoNombre`, `primerApellido`, `segundoApellido`, `DNI`) VALUES
-(1, 'Usu', 'd9b1d7db4cd6e70935368a1efb10e377', 'Fidel', 'Ernesto', 'Gutierrez', 'Membreño', '0801199501590');
+(1, 'Fiernes', 'd9b1d7db4cd6e70935368a1efb10e377', 'Fidel', 'Ernesto', 'Gutierrez', 'Membreño', '0801199501590'),
+(2, 'Wasani', 'd9b1d7db4cd6e70935368a1efb10e377', 'Adrian', 'Wasani', 'Martinez', 'Bonilla', '123'),
+(3, 'Daniel', 'd9b1d7db4cd6e70935368a1efb10e377', 'Cristopher', 'Daniel', 'Valle', 'Canales', '123');
 
 -- --------------------------------------------------------
 
@@ -209,9 +251,16 @@ INSERT INTO `persona` (`idPersona`, `usuario`, `password`, `primerNombre`, `segu
 
 CREATE TABLE `roles` (
   `idRol` int(11) NOT NULL,
-  `nombreRolUno` varchar(50) DEFAULT NULL,
-  `nombreRolDos` varchar(50) DEFAULT NULL
+  `nombreRol` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`idRol`, `nombreRol`) VALUES
+(1, 'Administrador'),
+(2, 'Empleado');
 
 --
 -- Índices para tablas volcadas
@@ -229,6 +278,12 @@ ALTER TABLE `carrito_libros`
 --
 ALTER TABLE `carrito_prestamo`
   ADD PRIMARY KEY (`idCarrito`);
+
+--
+-- Indices de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`idCategoria`);
 
 --
 -- Indices de la tabla `direccion`
@@ -267,6 +322,12 @@ ALTER TABLE `historial_prestamo`
   ADD KEY `Historial_Prestamo_idLibro_fk` (`idLibro`);
 
 --
+-- Indices de la tabla `imagen_libro`
+--
+ALTER TABLE `imagen_libro`
+  ADD PRIMARY KEY (`idLibro`);
+
+--
 -- Indices de la tabla `info_contacto`
 --
 ALTER TABLE `info_contacto`
@@ -276,7 +337,7 @@ ALTER TABLE `info_contacto`
 -- Indices de la tabla `libros`
 --
 ALTER TABLE `libros`
-  ADD PRIMARY KEY (`idLibro`);
+  ADD PRIMARY KEY (`categoria`);
 
 --
 -- Indices de la tabla `logs`
@@ -311,7 +372,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `idPersona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idPersona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
@@ -359,6 +420,12 @@ ALTER TABLE `estudiante`
 ALTER TABLE `historial_prestamo`
   ADD CONSTRAINT `Historial_Prestamo_idEstudiante_fk` FOREIGN KEY (`idEstudiante`) REFERENCES `estudiante` (`idEstudiante`),
   ADD CONSTRAINT `Historial_Prestamo_idLibro_fk` FOREIGN KEY (`idLibro`) REFERENCES `libros` (`idLibro`);
+
+--
+-- Filtros para la tabla `imagen_libro`
+--
+ALTER TABLE `imagen_libro`
+  ADD CONSTRAINT `ImagenLibro_idLibro_fk` FOREIGN KEY (`idLibro`) REFERENCES `libros` (`idLibro`);
 
 --
 -- Filtros para la tabla `info_contacto`

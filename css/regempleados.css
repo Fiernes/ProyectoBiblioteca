@@ -11,7 +11,7 @@ body {
 
 /* Estilo del contenedor del formulario */
 .form-container {
-    background-color: #deaf6d;
+    background-color: #a88e6a;
     padding: 20px;
     border-radius: 10px;
     margin: 0px auto;
@@ -20,7 +20,7 @@ body {
     overflow-y: auto;
     position: relative;
     box-sizing: border-box;
-    padding-bottom: 60px; /* Espacio para evitar solapamiento con botones */
+    padding-bottom: 20px; /* Espacio para evitar solapamiento con botones */
 }
 
 /* Estilo de los botones fijos en la parte inferior */

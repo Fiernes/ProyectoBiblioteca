@@ -20,18 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $segundoApellido = $_POST['segundoApellido'];
     $dni = $_POST['dni'];
 
-    // Tabla Dirección
-    $departamento = $_POST['departamento'];
-    $ciudad = $_POST['ciudad'];
-    $colonia = $_POST['colonia'];
-    $numeroCasa = $_POST['numeroCasa'];
-
-    // Tabla info Contacto
-    $correo = $_POST['correo'];
-    $telefono = $_POST['telefono'];
-    $telefonoPersonal = $_POST['telefonoPersonal'];
-    $telefonoRespaldo = $_POST['telefonoRespaldo'];
-
     // Tabla Estudiante
     $carrera = $_POST['carrera'];
     $numeroCuenta = $_POST['numerocuenta'];
@@ -47,28 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Crear las instancias para las tablas correspondientes
         $nuevaPersona = new Persona($idPersona, $usuario, $password, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $dni);
-        echo "$idPersona";
-        $nuevaDireccion = new Direccion($idPersona, $departamento, $ciudad, $colonia, $numeroCasa);
-        echo "$idPersona";
-        $nuevoContacto = new InfoContacto($idPersona, $correo, $telefono, $telefonoPersonal, $telefonoRespaldo);
-        echo "$idPersona";
         $nuevoEstudiante = new Estudiante($numeroCuenta, $idPersona, $carrera);
-        echo "$idPersona";
 
         // Intentar registrar en todas las tablas y verificar el éxito de cada operación
         $registroExitoso = true;
 
         if (!$personaDAO->crearPersona($nuevaPersona)) {
-            $registroExitoso = false;
-        }
-        
-        $direccionDAO = new DireccionDAO($dbConnection);
-        if (!$direccionDAO->crearDireccion($nuevaDireccion)) {
-            $registroExitoso = false;
-        }
-
-        $infoContactoDAO = new InfoContactoDAO($dbConnection);
-        if (!$infoContactoDAO->crearInfoContacto($nuevoContacto)) {
             $registroExitoso = false;
         }
         
@@ -80,10 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verificar si el registro fue exitoso
         if ($registroExitoso) {
             echo "<script>alert('Registro exitoso.'); window.location.href='../Login.html';</script>";
-    // O también puedes mostrar un mensaje como:
-    // echo "Registro exitoso. Ahora puedes iniciar sesión.";
-    // Y luego, hacer la redirección después de un pequeño delay, si lo prefieres.
-    // header("Location: ../Login.html"); // Redirigir después de mostrar los echo
     exit();
         } else {
             echo "<script>alert('Error al registrar el usuario'); window.location.href='../Registro.html';</script>";

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Registro de Empleados</title>
+    <title>Gestión de Usuarios</title>
     <link rel="stylesheet" href="../ProyectoBiblioteca/css/barranav.css">
     <link rel="stylesheet" href="css/regempleados.css">
     <link rel="icon" href="./imagenes/imagen1.png" type="image/png">
@@ -18,6 +18,9 @@
 </head>
 
 <body>
+
+     <!--Div para traer barra de navegación-->
+     <div id="nav-container"></div> 
 
     <!-- Título Descriptivo -->
     <div class="container text-center my-4">
@@ -106,7 +109,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="puesto">Puesto</label>
-                                <input type="text" class="form-control" id="puesto" required>
+                                <select class="form-control" id="puesto" required>
+                                    <option value="" disabled selected>Seleccione un puesto</option>
+                                    <option value="administrador">Administrador</option>
+                                    <option value="empleado">Empleado</option>
+                                </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="horarioLaboral">Horario Laboral</label>
@@ -123,8 +130,14 @@
                                 <input type="password" class="form-control" id="contraseña" required>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="confirmarContraseña">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" id="confirmarContraseña" required>
+                            </div>
+                        </div>
 
-                        <div class="error" id="error-message"></div>
+                        <div class="error text-danger text-center" id="error-message"></div>
 
                         <!-- Botones de Registrar y Cancelar -->
                         <div class="button-container">
@@ -140,6 +153,23 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function validateForm() {
+            const contraseña = document.getElementById("contraseña").value;
+            const confirmarContraseña = document.getElementById("confirmarContraseña").value;
+            const errorMessage = document.getElementById("error-message");
+
+            if (contraseña !== confirmarContraseña) {
+                errorMessage.textContent = "Las contraseñas no coinciden. Por favor, verifica.";
+                return false; // Previene el envío del formulario
+            }
+
+            errorMessage.textContent = ""; // Limpia el mensaje de error si no hay problemas
+            return true; // Permite el envío del formulario
+        }
+    </script>
+
+<script src="js/barra.js"></script>
 </body>
 
 </html>
