@@ -1,5 +1,7 @@
 <?php
 
+require_once '../modelo/Rol.php';
+
 class RolDAO {
     private $conn;
 
@@ -10,7 +12,7 @@ class RolDAO {
 
     // Método para crear un nuevo rol
     public function crearRol($rol) {
-        $sql = "INSERT INTO roles (idRol, nombreRolUno, nombreRolDos) 
+        $sql = "INSERT INTO roles (idRol, nombreRol) 
                 VALUES (?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         
@@ -36,8 +38,7 @@ class RolDAO {
         if ($row) {
             return new Rol(
                 $row['idRol'],
-                $row['nombreRolUno'],
-                $row['nombreRolDos']
+                $row['nombreRol']
             );
         }
         return null; // Retornar null si no se encuentra el rol
@@ -45,14 +46,13 @@ class RolDAO {
 
     // Método para actualizar un rol existente
     public function actualizarRol($rol) {
-        $sql = "UPDATE roles SET nombreRolUno = ?, nombreRolDos = ?
+        $sql = "UPDATE roles SET nombreRol = ?
                 WHERE idRol = ?";
         $stmt = $this->conn->prepare($sql);
         
         // Ejecutar la consulta con los datos del objeto rol
         $stmt->execute([
-            $rol->getNombreRolUno(),
-            $rol->getNombreRolDos(),
+            $rol->getNombreRol(),
             $rol->getIdRol()
         ]);
     }
@@ -79,8 +79,7 @@ class RolDAO {
         while ($row = $result->fetch_assoc()) {
             $roles[] = new Rol(
                 $row['idRol'],
-                $row['nombreRolUno'],
-                $row['nombreRolDos']
+                $row['nombreRol']
             );
         }
         return $roles; // Retorna un array con todos los roles

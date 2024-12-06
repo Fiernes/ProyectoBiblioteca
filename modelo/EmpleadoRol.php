@@ -4,7 +4,7 @@ class EmpleadoRol {
     private $idEmpleado;
     private $idRol;
     
-    public function __constructFull($idEmpleado, $idRol) {
+    public function __construct($idEmpleado, $idRol) {
         $this->idEmpleado = $idEmpleado;
         $this->idRol = $idRol;
     }

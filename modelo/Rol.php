@@ -2,35 +2,25 @@
 
 class Rol {
   private $idRol;
-  private $nombreRolUno;
-  private $nombreRolDos;
+  private $nombreRol;
   
-  public function __constructFull($idRol, $nombreRolUno, $nombreRolDos) {
+  public function __construct($idRol, $nombreRol) {
       $this->idRol = $idRol;
-      $this->nombreRolUno = $nombreRolUno;
-      $this->nombreRolDos = $nombreRolDos;
+      $this->nombreRol = $nombreRol;
   }
   public function getIdRol() {
       return $this->idRol;
   }
 
-  public function getNombreRolUno() {
-      return $this->nombreRolUno;
-  }
-
-  public function getNombreRolDos() {
-      return $this->nombreRolDos;
+  public function getNombreRol() {
+      return $this->nombreRol;
   }
 
   public function setIdRol($idRol): void {
       $this->idRol = $idRol;
   }
 
-  public function setNombreRolUno($nombreRolUno): void {
-      $this->nombreRolUno = $nombreRolUno;
-  }
-
-  public function setNombreRolDos($nombreRolDos): void {
-      $this->nombreRolDos = $nombreRolDos;
+  public function setNombreRol($nombreRol): void {
+      $this->nombreRol = $nombreRol;
   }
 }

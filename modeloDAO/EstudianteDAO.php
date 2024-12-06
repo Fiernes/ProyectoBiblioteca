@@ -1,5 +1,7 @@
 <?php
 
+require_once '../modelo/Estudiante.php';
+
 class EstudianteDAO {
 
     private $conn;
@@ -40,16 +42,16 @@ class EstudianteDAO {
     
 
     // Método para leer un estudiante específico
-    public function leerEstudiante($idEstudiante) {
-        $sql = "SELECT * FROM estudiante WHERE idEstudiante = ?";
+    public function leerEstudiante($idPersona) {
+        $sql = "SELECT * FROM estudiante WHERE idPersona = ?";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("i", $idEstudiante);
+        $stmt->bind_param("i", $idPersona);
         $stmt->execute();
-
+    
         // Obtener el resultado y asociar las variables
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
-
+    
         if ($row) {
             return new Estudiante(
                 $row['idEstudiante'],
@@ -59,6 +61,7 @@ class EstudianteDAO {
         }
         return null; // Retornar null si no se encuentra el estudiante
     }
+    
 
     // Método para actualizar un estudiante
     public function actualizarEstudiante($estudiante) {

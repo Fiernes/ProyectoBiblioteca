@@ -1,5 +1,7 @@
 <?php
 
+require_once '../modelo/EmpleadoRol.php';
+
 class EmpleadoRolDAO {
 
     private $conn;
@@ -10,7 +12,7 @@ class EmpleadoRolDAO {
     }
 
     // Método para asignar un rol a un empleado
-    public function asignarRolAEmpleado($empleadoRol) {
+    public function CrearRolAEmpleado($empleadoRol) {
         $sql = "INSERT INTO empleado_rol (idEmpleado, idRol) VALUES (?, ?)";
         $stmt = $this->conn->prepare($sql);
 
@@ -32,14 +34,15 @@ class EmpleadoRolDAO {
 
         // Obtener el resultado y construir un objeto EmpleadoRol
         $result = $stmt->get_result();
-        $roles = [];
-        while ($row = $result->fetch_assoc()) {
-            $roles[] = new EmpleadoRol(
+        $row = $result->fetch_assoc();
+        
+        if ($row) {
+            return new EmpleadoRol(
                 $row['idEmpleado'],
                 $row['idRol']
             );
         }
-        return $roles;
+        return null;
     }
 
     // Método para actualizar el rol de un empleado
