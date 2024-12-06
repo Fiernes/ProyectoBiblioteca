@@ -1,15 +1,11 @@
-
-
 body {
-  background-image: linear-gradient(to bottom right,  #F2A81D,#f2eadf,#0e1F40,#F2921d);
-background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Hace que el fondo se mantenga fijo al hacer scroll */}
-  
-  
+  background-image: linear-gradient(to bottom right, #F2A81D, #f2eadf, #0e1F40, #F2921d);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
- /* Estilos de la barra de navegación */
- nav {
+nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,196 +20,224 @@ background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
   z-index: 1000;
   padding-left: 0px;
 }
-  
-  nav img {
-    height: 50px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #F2A81D;
-    transform: scale(1.3);
-  }
-  
-  .search {
-    position: relative;
-    flex-grow: 1;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 5px 10px;
-    margin: 0 20px;
-    width: 100%;
-  }
-  
-  .search i {
-    color: #999;
-    font-size: 18px;
-  }
-  
-  .search input {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    outline: none;
-    padding: 5px;
-    font-size: 16px;
-  }
-  
-  .icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: white;
-    font-size: 23px;
-  }
 
-  .icons .fa-cart-shopping {
-    color: white; 
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .icons .fa-cart-shopping:hover {
-    color: white;
-    transform: scale(1.3);
-    filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5));
-  }
-  
-  .icons i {
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .icons i:hover {
-    color: white;
-    transform: scale(1.3);
-    filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5));
-  }
-  
-  /* Estilos del contenido principal del perfil de usuario */
-  .perfil-usuario-contenedor {
-    
-    margin-top: 100px; /* Espacio para la barra de navegación fija */
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    
-  }
-  
-  .perfil-informacion{
-    font-size: 150%;
-    background-color: #f2e2c6;
-    background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Hace que el fondo se mantenga fijo al hacer scroll */
-    padding: 20px;
-    border-radius: 9px;
-    width: 48%;
-    border-top-left-radius: 10px; 
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 10px; 
-    border-bottom-right-radius: 0px; 
-    
-  }
-  .perfil-historial {
-    font-size: 150%;
-    text-align: center;
-    display: inline-block;
-    background-image: url(../imagenes/fondPu.jpg);
-    background-size: cover; 
-    background-repeat: repeat;
-    background-attachment: scroll; /* Hace que el fondo se mantenga fijo al hacer scroll */
-    padding: 100px;
-    border-radius: 0px;
-    width: 48%;
-    border-top-left-radius: 0px; 
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0px; 
-    border-bottom-right-radius: 10px; 
-    animation: moverFondo 60s linear infinite;
+nav img {
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #F2A81D;
+  transform: scale(1.3);
+}
+
+.search {
+  position: relative;
+  flex-grow: 1;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0 20px;
+  width: 100%;
+}
+
+.search i {
+  color: #999;
+  font-size: 18px;
+}
+
+.search input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-size: 23px;
+}
+
+.icons .fa-cart-shopping {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons .fa-cart-shopping:hover {
+  color: white;
+  transform: scale(1.3);
+  filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5));
+}
+
+.icons i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons i:hover {
+  color: white;
+  transform: scale(1.3);
+  filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5));
+}
+
+.perfil-usuario-contenedor {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.perfil-informacion {
+  font-size: 150%;
+  background-color: #f2e2c6;
+  padding: 20px;
+  border-radius: 9px;
+  width: 48%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0px;
+}
+
+.perfil-historial {
+  font-size: 150%;
+  text-align: center;
+  display: inline-block;
+  background-image: url(../imagenes/fondPu.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  padding: 100px;
+  border-radius: 0px;
+  width: 48%;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 10px;
+  animation: moverFondo 60s linear infinite;
 }
 
 @keyframes moverFondo {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: -1000px 0; /* Ajusta el valor para controlar la distancia y dirección */
-    }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 0;
+  }
 }
 
- 
-  .perfil-informacion h1 {
-    text-align: center;
-    color: #81282d ;
-  }
-  .perfil-historial h2,
-  .perfil-historial h3 {
-    color: #000000  ;
-  }
-  
-  .perfil-informacion p,
-  .perfil-historial p {
-    color: #000000;
-  }
-  
-  .boton-editar,
-  .boton-volver {
-    font-size: 90%;
-    background-color: #0E1F40;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-  }
-  .boton-historial {
-    font-size: 90%;
-    background-color: #0E1F40;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .boton-editar:hover,
-  .boton-volver:hover{
-    background-color: #f2a81d;
-  }
-  .boton-historial:hover {
-    background-color: #f2a81d;  ;
-  }
-  
-  
-  .perfil-avatar {
-    background-color: #ffffff;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
+.perfil-informacion h1 {
+  text-align: center;
+  color: #81282d;
+}
+
+.perfil-historial h2,
+.perfil-historial h3 {
+  color: #000000;
+}
+
+.perfil-informacion p,
+.perfil-historial p {
+  color: #000000;
+}
+
+.boton-editar,
+.boton-volver {
+  font-size: 90%;
+  background-color: #0E1F40;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.boton-historial {
+  font-size: 90%;
+  background-color: #0E1F40;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-editar:hover,
+.boton-volver:hover {
+  background-color: #f2a81d;
+}
+
+.boton-historial:hover {
+  background-color: #f2a81d;
+}
+
+.perfil-avatar {
+  background-color: #ffffff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/*ESTILOS PARA LA EDICIÓN DE PERFIL */
+
+.perfil-informacion input,
+.perfil-informacion select,
+.perfil-informacion textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+}
+
+.perfil-informacion input:disabled,
+.perfil-informacion select:disabled,
+.perfil-informacion textarea:disabled {
+  background-color: #e9e9e9;
+  cursor: not-allowed;
+}
+
+/* Al habilitar los campos para edición */
+.editar-perfil .perfil-informacion input,
+.editar-perfil .perfil-informacion select,
+.editar-perfil .perfil-informacion textarea {
+  background-color: #fff;
+  border: 1px solid #0e1f40;
+}
+
+.editar-perfil .boton-editar {
+  display: block;
+  margin: 20px auto;
+}
