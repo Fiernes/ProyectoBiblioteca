@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro </title>
     <link rel="stylesheet" href="./css/Registro.css" />
-    <link rel="icon" href="./imagenes/imagen1.png" type="gif">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<link rel="icon" href="./imagenes/imagen1.png" type="gif">
 </head>
 
 <body>
@@ -25,19 +30,28 @@
 
             // Validación de contraseñas
             if (password !== confirmPassword) {
-                alert("Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.',
+                });
                 return false;
             }
 
             // Validación de DNI y número de cuenta (solo números)
             if (!/^\d+$/.test(dni) || !/^\d+$/.test(numerocuenta)) {
-                alert("El DNI y el número de cuenta deben contener solo números.");
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Oops...',
+                    text: 'El DNI y el número de cuenta deben contener solo números.',
+                    confirmButtonText: 'Intentar nuevamente'
+                })
                 return false;
             }
 
             return true;
         }
-    
+
     </script>
 
     <nav>
@@ -82,5 +96,16 @@
         </form>
     </div>
 </body>
+<footer>
+    <div class="contaner">
+        <p>&copy; 2024 SEMILLAS DEL SABER. Todos los derechos reservados.</p>
+    </div>
+
+    <div class="social-media">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
 
 </html>

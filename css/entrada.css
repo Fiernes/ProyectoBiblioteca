@@ -17,6 +17,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow-y: scroll;
 
 }
 
@@ -146,3 +147,4 @@ nav a:hover {
 img {
     margin-left: 20px;
 }
+
