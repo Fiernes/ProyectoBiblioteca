@@ -15,36 +15,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./registroLibros.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=".\css\styleb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+</head>
+
 
 <body>
 
+    <!--Div para traer barra de navegación-->
+    <div id="nav-container"></div> 
+
     <div class="container">
-        <div class="info">
-            <input type="file" class="archive" required>
-        </div>
 
         <form class="form" method="POST" action="../ruta/archivoPHP.php" onsubmit="return validateLibroForm()">
             <h2>REGISTRO LIBROS</h2>
             <p>El conocimiento jamás había estado tan cerca.</p>
             <div class="inputs">
-                <input type="text" class="box" name="codigo" placeholder="Ingrese el código" required>
-                <input type="text" class="box" name="titulo" placeholder="Ingrese el título" required>
-                <input type="text" class="box" name="autor" placeholder="Ingrese el autor" required>
-                <input type="date" class="box" name="anio_publicacion" placeholder="Año de publicación" required>
+                <input type="codigo" class="box" placeholder="Ingrese el codigo" required>
+                <input type="primerNombre" class="box" placeholder="Ingrese el titulo" required>
+                <input type="text" class="box" placeholder="Ingrese el autor" required>
+                <input type="date" class="box" placeholder="Año de publicacion" required>
                 <div class="custom-select">
-                    <select id="mySelect" name="categoria" required>
-                        <option value="">Elige tu categoría</option>
+                    <select id="mySelect" required>
+                        <option value="cat1">Elige tu categoria</option>
                         <option value="cat1">cat1</option>
                         <option value="cat2">cat2</option>
                     </select>
+
                 </div>
-                <input type="number" class="box" name="cantidad_disponible" placeholder="Cantidad disponible" required>
-                <input type="text" class="box" name="estado" placeholder="Estado" required>
+                <input type="cantidadDisponible" class="box" placeholder="Cantidad disponible" required>
+                <input type="estado" class="box" placeholder="Estado" required>
                 <input type="submit" value="Ingresar" class="submit">
             </div>
         </form>
+
+        <div class="info">
+            <!--Aca va la imagen que se debe sustituir al elegir un archivo de imagen-->>
+        </div>
     </div>
 
     <div class="contenedor">
