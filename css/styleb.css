@@ -94,14 +94,14 @@
     background-color: #c9cfdb;
     color: #669e9b;;
     border-left: 3px;
-    solid: #669e9b;
+    
     transition: all 0.1s ease-out;
   }
 
   .dropdown-menu_option:hover {
     color: #fffefb;
     border-left: 3px;
-    solid: #ffffff;
+    
     background-color: #ca3f3f;
     transition: all 0.1s ease-out;
   }
