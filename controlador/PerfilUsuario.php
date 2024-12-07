@@ -1,4 +1,14 @@
-<<<<<<< HEAD
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    // Si no hay sesión, redirigir al login
+    header("Location: Login.html");
+    exit();
+}
+
+// El archivo PerfilUsuario.php ahora manejará la lógica de la sesión
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,7 +46,7 @@
         <img src="./imagenes/logo.png" alt="logo" style="width: 70px; height: auto;">
         <ul>
             <li><a href="menu.html" class="inicio">Inicio</a></li>
-            <li><a href="PerfilUsuario.html" class="personal">Área personal</a></li>
+            <li><a href="PerfilUsuario.php" class="personal">Área personal</a></li>
             <li><a href="Nosotro.html" class="sobre">Sobre nosotros</a></li>
         </ul>
         <div class="search">
@@ -48,7 +58,7 @@
                 <i class="fa-sharp fa-solid fa-cart-shopping"></i>
             </a>
             <i class="fa-solid fa-message"></i>
-            <a href="controlador/PerfilUsuario.php" style="text-decoration: none; color: white;">
+            <a href="PerfilUsuario.php" style="text-decoration: none; color: white;">
                 <i class="fa-solid fa-circle-user"></i>
             </a>
         </div>
