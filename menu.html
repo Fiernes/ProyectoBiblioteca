@@ -7,6 +7,7 @@
     <!-- Enlaces -->
     <link rel ="stylesheet" href="../ProyectoBiblioteca/css/styleb.css">
     <link rel="stylesheet" href="./css/menu.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   </head>
   <body>
       <div id="nav-container"></div>
@@ -34,17 +35,27 @@
       <h3>Aquí hay algunos libros que te pueden interesar</h3>
       <div class="books-grid">
         <div class="book-card">
-          <img src="./imagenes/Metodos_1.jpg" alt="Métodos Cuantitativos I">
+          <img src=".\imagenes\Metodos_1.jpg" alt="Métodos Cuantitativos I">
           <h4>Métodos Cuantitativos I</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: Karen Aguero Orellana | Justa Lobo de Corea</p>
+            <p>Año: 20</p>
+            <p>Descripción: Libro de trabajo lleva de la mano al estudiante desde una primera etapa donde se realiza un examen diagnostico.</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
-          </button>
+          </button> 
         </div>
         <div class="book-card">
           <img src=".\imagenes\Matematica_financiera.jfif" alt="Matemáticas Financieras">
           <h4>Matemáticas Financieras</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Una introducción a Matematica financiera.</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -52,7 +63,12 @@
         <div class="book-card">
           <img src=".\imagenes\Mafalda.jpg" alt="Mafalda">
           <h4>Mafalda</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Comic de Mafalda.</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -60,7 +76,12 @@
         <div class="book-card">
           <img src=".\imagenes\Tecnologia_ informatica.jpg" alt="Tecnología con énfasis en informática">
           <h4>Tecnología con énfasis en informática</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Una introducción a la Tecnologia con énfasis en informática</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -68,7 +89,12 @@
         <div class="book-card">
           <img src=".\imagenes\Atlas_Humano.png" alt="Atlas de anatomía humana">
           <h4>Atlas de anatomía humana</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Una introducción al Atlas de anatomía humana</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -76,7 +102,12 @@
         <div class="book-card">
           <img src=".\imagenes\Historia.jpg" alt="Historia Universal">
           <h4>Historia Universal</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Una introducción a la Historia Universal</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -84,7 +115,12 @@
         <div class="book-card">
           <img src=".\imagenes\Atlantis.jfif" alt="Atlantis: Proyecto Tarsis">
           <h4>Atlantis: Proyecto Tarsis</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Una introducción de Atlantis: Proyecto Tarsis</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -92,7 +128,12 @@
         <div class="book-card">
           <img src=".\imagenes\lenguas-extranjeras.jpg" alt="Lenguas extranjeras">
           <h4>Lenguas extranjeras</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Una introducción de Lenguas extranjeras</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -100,7 +141,12 @@
         <div class="book-card">
           <img src=".\imagenes\Intro_finanzas.jfif" alt="Introducción a las Finanzas">
           <h4>Introducción a las Finanzas</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Una introducción a las Finanzas</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -108,7 +154,12 @@
         <div class="book-card">
           <img src=".\imagenes\Derecho_civil.jpg" alt="Derecho Civil">
           <h4>Derecho Civil: Manual de Obligaciones y Contratos</h4>
-          <button class="btn common btn-more">Ver más</button>
+          <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
+          <div class="details">
+            <p>Autor: John Doe</p>
+            <p>Año: 2020</p>
+            <p>Descripción: Una introducción de Derecho Civil</p>
+          </div>
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
@@ -118,8 +169,11 @@
 
     <!-- Script para la barra lateral -->
     <script src="js/menu.js"></script>
+
     <script src="js/barra.js"></script>
-    
+     
+    <!-- Llamar al archivo externo -->
+    <script src="./js/info_libros.js"></script>
 
   </body>
 </html>

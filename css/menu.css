@@ -60,9 +60,9 @@
         .sidebar-content a:hover {
           background-color: #bf303c;
         }
-  
-        /* Contenido principal */
-        main {
+
+         /* Contenido principal */
+         main {
           margin-left: 0;
           padding: 20px;
           transition: margin-left 0.3s ease;
@@ -111,82 +111,49 @@
           color: white;
         }
   
-        .btn-cart :hover { 
-          transform: scale(1.3); 
-          filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5)); 
-        }
-
         .btn-more {
           background-color: #bf303c;
           color: white;
         }
 
-        /* Contenido principal */
-        main {
-          margin-left: 0;
-          padding: 100px;
-          transition: margin-left 0.3s ease;
-          text-align: center; 
-          margin-bottom: 20px;
-        }
-  
-        .books-grid {
-          padding: 50px;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 90px;
-          justify-content: center;
-        }
-  
-        .book-card {
+        .btn-cart:hover, .btn-more:hover {
+          transform: scale(1.1); 
+          filter: drop-shadow(0 2px 5px rgba(196, 192, 170, 0.5)); 
+         }
+ 
+          .btn-common {
+           display: absolute;        
+           align-items: center;       
+           justify-content: center;    
+           padding: 10px 15px;         
+           font-size: 14px;            
+           cursor: pointer;            
+           border: none;               
+           border-radius: 3px;         
+           text-align: center;        
+           text-decoration: none;
+           transition: background-color 0.3s ease, transform 0.2s ease;  
+           }
+
+          .details {
+           margin-top: 15px;
+          }
+
+         /* Contenido de libros */
+        .details {
+          display: none; 
           background-color: #f5f5f5;
-          padding: 5px;
-          width: 150px;
-          border-radius: 5px;
-          text-align: center;
+          border-top: 1px solid #0E1F40;
+          margin-top: 10px;
+          padding: 10px;
+          text-align: left;
+          font-size: 0.9em;
         }
-  
-        .book-card img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 5px;
-        }
-  
-        .book-card h3 {
-          font-size: 16px;
-          margin: 10px 0;
+        
+        .details.visible {
+          display: block; 
         }
 
-         /* Botón base para ambos */
-         .btn-common {
-          display: absolute;        
-          align-items: center;       
-          justify-content: center;    
-          padding: 10px 15px;         
-          font-size: 14px;            
-          cursor: pointer;            
-          border: none;               
-          border-radius: 3px;         
-          text-align: center;        
-          text-decoration: none;
-          transition: background-color 0.3s ease, transform 0.2s ease;  
-          }
-  
-          .btn-more {
-          background-color: #bf303c;  
-          color: white;               
-          }
-  
-          .btn-cart {
-          background-color: #F2A81D;  
-          color: white;               
-          }
-  
-         .btn-cart i {
-          font-size: 10px;            
-          margin-right: 10px; 
-          color: #fff;        
-          }
 
         /* Responsivo */
         @media (max-width: 768px) {
