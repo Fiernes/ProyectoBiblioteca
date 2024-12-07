@@ -2,27 +2,30 @@
 
 require_once '../modelo/Categorias.php';
 
-class CategoriasDAO{
+class CategoriasDAO
+{
 
     private $conn;
 
     // Constructor para recibir la conexión a la base de datos
-    public function __construct($dbConnection){
+    public function __construct($dbConnection)
+    {
         $this->conn = $dbConnection->getConnection();
     }
 
     // Método para crear una nueva categoría
-    public function crearCategoria($categoria){
+    public function crearCategoria($categoria)
+    {
         $sql = "INSERT INTO categorias (nombre) VALUES (?)";
         $stmt = $this->conn->prepare($sql);
 
-        if ($stmt === false){
+        if ($stmt === false) {
             die('Error al preparar la consulta: ' . $this->conn->error);
         }
 
         $nombre = $categoria->getNombre(); // Almacena el valor en una variable
         $stmt->bind_param('s', $nombre);   // Pasa la variable como referencia
-        
+
 
         $stmt->execute();
 
@@ -30,7 +33,7 @@ class CategoriasDAO{
         if ($stmt->affected_rows === 0) {
             return false; // Indica que no se insertó ningún dato
         }
-    
+
         return true;
     }
 
@@ -94,15 +97,22 @@ class CategoriasDAO{
 
     // Método para listar todas las categorías
     public function listarCategorias()
-    {
-        $sql = "SELECT * FROM categorias";
-        $resultado = $this->conn->query($sql);
+{
+    $sql = "SELECT * FROM categorias";
+    $result = $this->conn->query($sql);
 
-        $categorias = [];
-        while ($fila = $resultado->fetch_assoc()) {
-            $categorias[] = new categorias($fila['idCategoria'], $fila['nombre']);
-        }
-
-        return $categorias;
+    if (!$result) {
+        die("Error en la consulta: " . $this->conn->error);
     }
+
+    $categorias = [];
+    while ($row = $result->fetch_assoc()) {
+        $categorias[] = new Categorias(
+            $row['idCategoria'],
+            $row['nombre']
+        );
+    }
+    return $categorias;
+}
+
 }

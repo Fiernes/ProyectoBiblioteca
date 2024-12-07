@@ -42,14 +42,6 @@
     font-size: 23px;
   }
 
-  .icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #e0e0d1;
-    font-size: 23px;
-  }
-
 
   .icons i {
     transition: transform 0.3s ease, color 0.3s ease;
@@ -62,7 +54,7 @@
   }
 
   .dropdown-menu_section {
-    padding: 10PX;
+    padding: 10px;
   }
 
 
@@ -90,7 +82,6 @@
   .dropdown-menu_header img {
     width: 50 px;
     border-radius: 100px;
-    float: right mr-5;
   }
 
 
@@ -101,9 +92,9 @@
 
   .dropdown-menu_section:hover {
     background-color: #c9cfdb;
-    color: #faad1d;
+    color: #669e9b;;
     border-left: 3px;
-    solid: #F2A81D;
+    solid: #669e9b;
     transition: all 0.1s ease-out;
   }
 
