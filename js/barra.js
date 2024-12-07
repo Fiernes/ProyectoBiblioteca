@@ -9,3 +9,4 @@ fetch('navegacion.html')
   .catch(error => {
     console.error('Error al cargar la navegación:', error);
   });
+
