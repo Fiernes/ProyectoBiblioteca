@@ -48,22 +48,22 @@
             
         </div>
 
-        <form class="form" method="POST" action="../ruta/archivoPHP.php" onsubmit="return validateLibroForm()">
+        <form class="form" method="POST" action="./controlador/ContRegistroLibro.php" onsubmit="return validateLibroForm()">
             <h2>REGISTRO LIBROS</h2>
             <p>El conocimiento jamas habia estado tan cerca.</p>
             <div class="inputs">
-                <input type="codigo" class="box" placeholder="Ingrese el codigo" required>
-                <input type="primerNombre" class="box" placeholder="Ingrese el titulo" required>
-                <input type="text" class="box" placeholder="Ingrese el autor" required>
-                <input type="date" class="box" placeholder="Año de publicacion" required>
+                <input type="text" name="codigo" class="box" placeholder="Ingrese el codigo" required>
+                <input type="text" name="titulo" class="box" placeholder="Ingrese el titulo" required>
+                <input type="text" name="autor" class="box" placeholder="Ingrese el autor" required>
+                <input type="date" name="fechaPublicacion" class="box" placeholder="Año de publicacion" required>
                 <select name="miLista" id="miLista" class="box">
                     <option value="valor1">Opción 1</option>
                     <option value="valor2">Opción 2</option>
                     <option value="valor3" selected>Elija su categoria </option>
                 </select>
-                <input type="cantidadDisponible" class="box" placeholder="Cantidad disponible" required>
-                <input type="estado" class="box" placeholder="Estado" required>
-                <input type="file" id="myFile" class="box" accept="image/*" required>
+                <input type="text" name="cantidad" class="box" placeholder="Cantidad disponible" required>
+                <input type="text" name="estado" class="box" placeholder="Estado" required>
+                <input type="file" name="imagen" id="myFile" class="box" accept="image/*" required>
                 <script>
                     const myFile = document.getElementById('myFile');
 

@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Verificar si las contraseñas coinciden
     if ($password === $confirmPassword) {
         $dbConnection = new Conexion();
-        
+
         // Obtener el nuevo ID de persona
         $personaDAO = new PersonaDAO($dbConnection);
         $idPersona = $personaDAO->obtenerIdMax();
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!$personaDAO->crearPersona($nuevaPersona)) {
             $registroExitoso = false;
         }
-        
+
         $estudianteDAO = new EstudianteDAO($dbConnection);
         if (!$estudianteDAO->crearEstudiante($nuevoEstudiante)) {
             $registroExitoso = false;
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verificar si el registro fue exitoso
         if ($registroExitoso) {
             echo "<script>alert('Registro exitoso.'); window.location.href='../Login.html';</script>";
-    exit();
+            exit();
         } else {
             echo "<script>alert('Error al registrar el usuario'); window.location.href='../Registro.html';</script>";
         }
