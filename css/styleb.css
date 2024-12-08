@@ -66,7 +66,6 @@
 
   }
 
-
   .dropdown-menu_header {
     background-color: #b8101e;
     border-radius: 10px 10px 0px 0px;
@@ -75,13 +74,13 @@
 
   .dropdown-menu__username {
     color: #fff;
-
-
   }
+
 
   .dropdown-menu_header img {
     width: 50 px;
     border-radius: 100px;
+    float: right mr-5;
   }
 
 
@@ -89,8 +88,7 @@
     padding: 10px;
     cursor: pointer;
   }
-
-  .dropdown-menu_section:hover {
+    .dropdown-menu_section:hover {
     background-color: #c9cfdb;
     color: #669e9b;;
     border-left: 3px;
@@ -120,3 +118,4 @@
       display: block;
     }
   }
+ 
