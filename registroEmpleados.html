@@ -5,7 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
     <title data-translate="page_title">Gestión de Usuarios</title>
+=======
+<<<<<<< HEAD
+
+    <title data-translate="page_title">Gestión de Usuarios</title>
+=======
+<<<<<<< HEAD
+
+    <title data-translate="page_title">Gestión de Usuarios</title>
+=======
+<<<<<<< HEAD
+=======
+
+    <title data-translate="page_title">Gestión de Usuarios</title>
+>>>>>>> ca7f84657db06da87cf1cdd867ae51f24b5f0e01
+>>>>>>> 06720e997488e4387e26a8499b71371d11c77d03
+>>>>>>> b079bb4a0e3036fd38c93199bb7034d8450f3fef
+    <title>Registro de Empleados</title>
+>>>>>>> a7d8c243698ea6e9674a92337b1b7aff394cc7c7
     <link rel="stylesheet" href="../ProyectoBiblioteca/css/barranav.css">
     <link rel="stylesheet" href="css/regempleados.css">
     <link rel="icon" href="./imagenes/imagen1.png" type="image/png">
@@ -30,6 +49,52 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styleb.css">
     <script src="js/idioma.js" defer></script>
+<<<<<<< HEAD
+=======
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Función para mostrar u ocultar contraseñas
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById('contraseña');
+            var confirmPasswordField = document.getElementById('confirmarContraseña');
+            var checkbox = document.getElementById('showPassword');
+
+            if (checkbox.checked) {
+                passwordField.type = 'text';
+                confirmPasswordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+                confirmPasswordField.type = 'password';
+            }
+        }
+
+        // Función para validar las contraseñas
+        function validateForm() {
+            var password = document.getElementById('contraseña').value;
+            var confirmPassword = document.getElementById('confirmarContraseña').value;
+
+            // Verificar si las contraseñas coinciden
+            if (password !== confirmPassword) {
+                // Mostrar mensaje de error con SweetAlert2
+                Swal.fire({
+                    icon: 'error',
+                    title: '¡Error!',
+                    text: 'Las contraseñas no coinciden. Por favor, verifique.',
+                    confirmButtonText: 'Aceptar',
+                    background: '#f8d7da', // Color de fondo (rojo claro)
+                    iconColor: '#dc3545' // Color del ícono (rojo)
+                });
+
+                return false; // Impide el envío del formulario
+            }
+
+            // Si las contraseñas coinciden, permite el envío del formulario
+            return true;
+        }
+    </script>
+>>>>>>> a7d8c243698ea6e9674a92337b1b7aff394cc7c7
 </head>
 
 <body>
@@ -37,6 +102,23 @@
     <!--Div para traer barra de navegación-->
     <div id="nav-container"></div> 
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    <!--Div para traer barra de navegación-->
+    <div id="nav-container"></div> 
+
+=======
+<<<<<<< HEAD
+=======
+    <!--Div para traer barra de navegación-->
+    <div id="nav-container"></div> 
+
+>>>>>>> ca7f84657db06da87cf1cdd867ae51f24b5f0e01
+>>>>>>> 06720e997488e4387e26a8499b71371d11c77d03
+>>>>>>> b079bb4a0e3036fd38c93199bb7034d8450f3fef
+>>>>>>> a7d8c243698ea6e9674a92337b1b7aff394cc7c7
     <!-- Título Descriptivo -->
     <div class="container text-center my-4">
         <h3 data-translate="form_title">Formulario para Registrar Nuevos Empleados</h3>
@@ -124,14 +206,20 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 06720e997488e4387e26a8499b71371d11c77d03
                                 <label for="puesto" data-translate="position_label">Puesto</label>
                                 <select class="form-control" id="puesto" required>
                                     <option value="" disabled selected>Seleccione un puesto</option>
-=======
+>>>>>>> ca7f84657db06da87cf1cdd867ae51f24b5f0e01
+>>>>>>> b079bb4a0e3036fd38c93199bb7034d8450f3fef
                                 <label for="rol">Rol</label>
                                 <select class="form-control" id="rol" required>
                                     <option value="" disabled selected>Seleccione un rol</option>
->>>>>>> e0875ae6ab8a059f0d9f507875c44ac0beb19cdd
                                     <option value="administrador">Administrador</option>
                                     <option value="empleado">Empleado</option>
                                 </select>
@@ -143,10 +231,6 @@
                         </div>
                         <!-- Nuevo campo "Puesto" agregado -->
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="puesto">Puesto</label>
-                                <input type="text" class="form-control" id="puesto" required>
-                            </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">

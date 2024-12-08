@@ -251,7 +251,11 @@ const translations = {
     
     },
     en: {
+<<<<<<< HEAD
       login_title: "Penecito",
+=======
+      login_title: "login",
+>>>>>>> a7d8c243698ea6e9674a92337b1b7aff394cc7c7
       login_button: "Sign In",
       register_link: "Register",
       no_Cu: "Don't have an account?",
