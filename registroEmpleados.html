@@ -15,9 +15,6 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./registroLibros.js"></script>
     <script src="./previa.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -32,12 +29,22 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styleb.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        // Función para mostrar u ocultar contraseñas
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById('contraseña');
+            var confirmPasswordField = document.getElementById('confirmarContraseña');
+            var checkbox = document.getElementById('showPassword');
 
+            if (checkbox.checked) {
+                passwordField.type = 'text';
+                confirmPasswordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+                confirmPasswordField.type = 'password';
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -162,6 +169,12 @@
                                 <label for="confirmarContraseña">Confirmar Contraseña</label>
                                 <input type="password" class="form-control" id="confirmarContraseña" required>
                             </div>
+                        </div>
+
+                        <!-- Opción para ver las contraseñas -->
+                        <div class="form-group">
+                            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> 
+                            <label for="showPassword">Mostrar Contraseñas</label>
                         </div>
 
                         <div class="error text-danger text-center" id="error-message"></div>
