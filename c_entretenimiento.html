@@ -33,11 +33,30 @@
          <script src="js/idioma.js" defer></script>
    </head>
    <body>
+    <body>
 
-    <!-- Barra de navegacion -->
-      <div id="nav-container"></div>
-
-  <!-- Contenido principal -->
+      <!-- Barra de navegacion -->
+        <div id="nav-container"></div>
+  
+      <!-- Botón de hamburguesa -->
+      <button class="hamburger" onclick="toggleSidebar()" id="hamburger-btn">&#9776;</button>
+  
+      <!-- Contenedor para la barra lateral -->
+      <div id="sidebar-container"></div>
+  
+       <!-- Barra lateral -->
+       <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+          <h2 data-translate="categories_title">Categorías</h2>
+          <a href="c_derecho.html" data-translate="category_law">Derecho</a>
+          <a href="c_entretenimiento.html" data-translate="category_entertainment">Entretenimiento</a>
+          <a href="c_finanzas.html" data-translate="category_finance">Finanzas</a>
+          <a href="c_historia.html" data-translate="category_history">Historia</a>
+          <a href="c_lenguas.html" data-translate="category_languages">Lenguas extranjeras</a>
+          <a href="c_medicina.html" data-translate="category_medicine">Medicina</a>
+          <a href="c_tecnologia.html" data-translate="category_technology">Tecnología</a>
+        </div>
+      </div>
   <main>
     <h3 id="categoria-titulo">Libros de Entretenimiento </h3>
       <div class="books-grid"> 

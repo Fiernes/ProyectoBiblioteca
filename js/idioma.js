@@ -251,7 +251,7 @@ const translations = {
     
     },
     en: {
-      login_title: "Login",
+      login_title: "login",
       login_button: "Sign In",
       register_link: "Register",
       no_Cu: "Don't have an account?",
