@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
     <title data-translate="page_title">Gestión de Usuarios</title>
+=======
+    <title>Registro de Empleados</title>
+>>>>>>> e0875ae6ab8a059f0d9f507875c44ac0beb19cdd
     <link rel="stylesheet" href="../ProyectoBiblioteca/css/barranav.css">
     <link rel="stylesheet" href="css/regempleados.css">
     <link rel="icon" href="./imagenes/imagen1.png" type="image/png">
@@ -29,14 +33,63 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styleb.css">
+<<<<<<< HEAD
     <script src="js/idioma.js" defer></script>
+=======
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Función para mostrar u ocultar contraseñas
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById('contraseña');
+            var confirmPasswordField = document.getElementById('confirmarContraseña');
+            var checkbox = document.getElementById('showPassword');
+
+            if (checkbox.checked) {
+                passwordField.type = 'text';
+                confirmPasswordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+                confirmPasswordField.type = 'password';
+            }
+        }
+
+        // Función para validar las contraseñas
+        function validateForm() {
+            var password = document.getElementById('contraseña').value;
+            var confirmPassword = document.getElementById('confirmarContraseña').value;
+
+            // Verificar si las contraseñas coinciden
+            if (password !== confirmPassword) {
+                // Mostrar mensaje de error con SweetAlert2
+                Swal.fire({
+                    icon: 'error',
+                    title: '¡Error!',
+                    text: 'Las contraseñas no coinciden. Por favor, verifique.',
+                    confirmButtonText: 'Aceptar',
+                    background: '#f8d7da', // Color de fondo (rojo claro)
+                    iconColor: '#dc3545' // Color del ícono (rojo)
+                });
+
+                return false; // Impide el envío del formulario
+            }
+
+            // Si las contraseñas coinciden, permite el envío del formulario
+            return true;
+        }
+    </script>
+>>>>>>> e0875ae6ab8a059f0d9f507875c44ac0beb19cdd
 </head>
 
 <body>
 
+<<<<<<< HEAD
     <!--Div para traer barra de navegación-->
     <div id="nav-container"></div> 
 
+=======
+>>>>>>> e0875ae6ab8a059f0d9f507875c44ac0beb19cdd
     <!-- Título Descriptivo -->
     <div class="container text-center my-4">
         <h3 data-translate="form_title">Formulario para Registrar Nuevos Empleados</h3>
@@ -123,9 +176,15 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
+<<<<<<< HEAD
                                 <label for="puesto" data-translate="position_label">Puesto</label>
                                 <select class="form-control" id="puesto" required>
                                     <option value="" disabled selected>Seleccione un puesto</option>
+=======
+                                <label for="rol">Rol</label>
+                                <select class="form-control" id="rol" required>
+                                    <option value="" disabled selected>Seleccione un rol</option>
+>>>>>>> e0875ae6ab8a059f0d9f507875c44ac0beb19cdd
                                     <option value="administrador">Administrador</option>
                                     <option value="empleado">Empleado</option>
                                 </select>
@@ -133,6 +192,13 @@
                             <div class="form-group col-md-6">
                                 <label for="horarioLaboral" data-translate="work_schedule_label">Horario Laboral</label>
                                 <input type="text" class="form-control" id="horarioLaboral" required>
+                            </div>
+                        </div>
+                        <!-- Nuevo campo "Puesto" agregado -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="puesto">Puesto</label>
+                                <input type="text" class="form-control" id="puesto" required>
                             </div>
                         </div>
                         <div class="form-row">
@@ -152,7 +218,11 @@
                             </div>
                         </div>
 
-                        <div class="error text-danger text-center" id="error-message"></div>
+                        <!-- Opción para ver las contraseñas -->
+                        <div class="form-group">
+                            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> 
+                            <label for="showPassword">Mostrar Contraseñas</label>
+                        </div>
 
                         <!-- Botones de Registrar y Cancelar -->
                         <div class="button-container">
@@ -165,26 +235,14 @@
         </div>
     </div>
 
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/registro.js"></script>
+
+    <!-- Librerías Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function validateForm() {
-            const contraseña = document.getElementById("contraseña").value;
-            const confirmarContraseña = document.getElementById("confirmarContraseña").value;
-            const errorMessage = document.getElementById("error-message");
 
-            if (contraseña !== confirmarContraseña) {
-                errorMessage.textContent = "Las contraseñas no coinciden. Por favor, verifica.";
-                return false; // Previene el envío del formulario
-            }
-
-            errorMessage.textContent = ""; // Limpia el mensaje de error si no hay problemas
-            return true; // Permite el envío del formulario
-        }
-    </script>
-
-<script src="js/barra.js"></script>
 </body>
 
 </html>
