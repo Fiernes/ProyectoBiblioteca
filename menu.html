@@ -33,7 +33,9 @@
   </head>
   <body>
 
+    <!-- Barra de navegacion -->
       <div id="nav-container"></div>
+
     <!-- Botón de hamburguesa -->
     <button class="hamburger" onclick="toggleSidebar()" id="hamburger-btn">&#9776;</button>
 
@@ -53,9 +55,9 @@
 
     <!-- Contenido principal -->
     <main>
-      <h1>Bienvenido a la Biblioteca</h1>
-      <h3>Aquí hay algunos libros que te pueden interesar</h3>
-      <div class="books-grid">
+      <h3>Bienvenido a la Biblioteca</h3>
+      <h4>Aquí hay algunos libros que te pueden interesar</h4>
+      <div class="books-grid"> 
         <div class="book-card">
           <img src="./imagenes/Metodos_1.jpg" alt="Métodos Cuantitativos I">
           <h4>Métodos Cuantitativos I</h4>
@@ -65,13 +67,13 @@
             <p>Año: 20</p>
             <p>Descripción: Libro de trabajo para el estudiante donde se realiza un examen diagnostico.</p>
           </div>
-          <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
+         <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
-          </button> 
+          </button>
         </div>
         <div class="book-card">
           <img src="./imagenes/matemática.jpg" alt="Matemáticas Financieras">
-          <h4>Paradogas y Fundamentos de la Matematica</h4>
+          <h4>Paradogas y Fundamentos de la Matemática</h4>
           <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
           <div class="details">
             <p>Autor: Juan Eduardo Nápoles Valdés</p>
@@ -137,6 +139,7 @@
         <div class="book-card">
           <img src="./imagenes/Atlantis.jpg" alt="Atlantis: Proyecto Tarsis">
           <h4>Atlantis and Lemuria</h4>
+          <div class="button-group">
           <button class="btn btn-more" onclick="toggleDetails(this)">Ver más</button>
           <div class="details">
             <p>Autor: Edgar Cayce's</p>
@@ -146,6 +149,7 @@
           <button onclick="location.href='carritocom.html'" class="btn common btn-cart">
             <i class="fa-sharp fa-solid fa-shopping-cart"></i>
           </button>
+          </div>
         </div>
         <div class="book-card">
           <img src="./imagenes/lenguas-extranjeras.jpg" alt="Lenguas extranjeras">
@@ -190,13 +194,9 @@
     </main>
 
     <!-- Script de hamburguesa, barra y info de libros -->
-
-
     <script src="js/barra.js"></script>
     <script src="./js/info_libros.js"></script>
-   <script src="js/menu.js"></script>
-
-    
+    <script src="js/menu.js"></script>
 
   </body>
 </html>
