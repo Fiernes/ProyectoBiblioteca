@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro </title>
+    <title data-translate="page_title">Registro</title>
     <link rel="stylesheet" href="./css/Registro.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <script src="js/idioma.js" defer></script>
 </head>
 
 <link rel="icon" href="./imagenes/imagen1.png" type="gif">
@@ -56,34 +56,22 @@
 
     <nav>
         <img src="./imagenes/logo.png" alt="Logo Semillas" style="width: 70px; height: auto;">
-
-        <a href="index.html">Inicio</a>
-
-        <a href="Nosotro.html">Acerca de</a>
-        <!-----<button class="login-button" onclick="redireccion()">Inicio</button>---->
-
-        <!--<a href="Nosotro.html">Acerca de</a>-->
-        <!-----<button class="login-button" onclick="redireccion()">Inicio</button>---->
-
-
+        <a href="index.html" data-translate="home_link">Inicio</a>
+        <a href="Nosotro.html" data-translate="about_us_link">Acerca de</a>
     </nav>
-
-
 
     <div class="container">
         <div class="info">
-
         </div>
 
         <form class="form" action="./controlador/ContRegistroEstu.php" method="POST" onsubmit="return validateForm()">
-            <h2>REGISTRO</h2>
-            <p>El conocimiento jamás había estado tan cerca.</p>
+            <h2 data-translate="register_title">REGISTRO</h2>
+            <p data-translate="registration_message">El conocimiento jamás había estado tan cerca.</p>
             <div class="inputs">
                 <input type="text" name="primerNombre" class="box" placeholder="Ingresa tu primer nombre" required>
                 <input type="text" name="segundoNombre" class="box" placeholder="Ingresa tu segundo nombre" required>
                 <input type="text" name="primerApellido" class="box" placeholder="Ingresa tu primer apellido" required>
-                <input type="text" name="segundoApellido" class="box" placeholder="Ingresa tu segundo apellido"
-                    required>
+                <input type="text" name="segundoApellido" class="box" placeholder="Ingresa tu segundo apellido" required>
                 <input type="text" name="dni" class="box" placeholder="Ingresa tu DNI" required>
                 <input type="text" name="numerocuenta" class="box" placeholder="Ingresa tu numero de cuenta" required>
                 <input type="text" name="carrera" class="box" placeholder="Ingresa tu carrera" required>
@@ -91,11 +79,10 @@
                 <input type="password" name="password" class="box" placeholder="Ingresa una contraseña" required>
                 <input type="password" name="confirmPassword" class="box" placeholder="Confirma la contraseña" required>
 
-                <input type="submit" value="Registrate" class="submit">
+                <input type="submit" value="Registrate" class="submit" data-translate="submit_button">
             </div>
         </form>
     </div>
 </body>
-
 
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Usuarios</title>
+    <title data-translate="user_management_title">Gestión de Usuarios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,7 +34,8 @@
      <!--Iconos e Imagen de la pestaña logotipo-->
      <script src="https://kit.fontawesome.com/fa2969f656.js" crossorigin="anonymous"></script>
      <link rel="icon" href="./imagenes/imagen1.png" type="gif">
-     
+     <script src="js/idioma.js" defer></script>
+
 
 </head>
 <body>
@@ -42,19 +43,18 @@
     <div id="nav-container"></div> 
 
     <div class="Tittle-l">
-        <h1>Gestión de Usuarios</h1>
+        <h1 data-translate="user_management_title">Gestión de Usuarios</h1>
     </div>
 
     <div class="contenedor-l">
-        <i class="fa-solid fa-users"></i>
+        <i class="fa-solid fa-users" data-translate="user_table_icon"></i>
         <div class="Tittle">
-            <h1>Tabla de Usuarios</h1>
+            <h1 data-translate="user_table_title">Tabla de Usuarios</h1>
         </div>
-    
-           <div class="san-bar">
-            <input type="text" class="search-input" placeholder="Buscar...">
-            <button class="search-button">Buscar</button>
-           </div>
+        <div class="san-bar">
+            <input type="text" class="search-input" placeholder="Buscar..." data-translate="search_placeholder">
+            <button class="search-button" data-translate="search_button">Buscar</button>
+        </div>
         </div>
     
            <!--<table>
@@ -75,11 +75,11 @@
             </table>-->
         
        
-         <a href="menu.html" class="volver-l">Volver</a><br>
-         <br>
-    
-         <a href="menu.html" class="opcion-l">Opcion 1</a>
-         <a href="menu.html" class="opcion-l">Opcion 2</a>
+            <a href="menu.html" class="volver-l" data-translate="back_button">Volver</a><br>
+            <br>
+            
+            <a href="menu.html" class="opcion-l" data-translate="option_1">Opción 1</a>
+            <a href="menu.html" class="opcion-l" data-translate="option_2">Opción 2</a>
 
  <script src="js/barra.js"></script>
 </body>

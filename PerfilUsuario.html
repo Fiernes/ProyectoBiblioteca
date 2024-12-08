@@ -17,58 +17,58 @@ $usuario = $_SESSION['usuario'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
+    <title data-translate="page_title">Perfil de Usuario</title>
     <link rel="stylesheet" href="css/PerfilUsuario.css">
     <link rel="icon" href="./imagenes/imagen1.png" type="gif">
     <link rel="stylesheet" href="css/styleb.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/validacionesPerfil.js" defer></script>
+    <script src="js/idioma.js" defer></script>
 </head>
 <body>
     <div id="nav-container"></div>
     <!-- Contenido principal del perfil de usuario -->
     <div class="perfil-usuario-contenedor">
         <div class="perfil-informacion">
-            <h1>Perfil de Usuario</h1>
-            <label for="nombre-completo"><strong>Nombre Completo:</strong>
+            <h1 data-translate="profile_title">Perfil de Usuario</h1>
+            <label for="nombre-completo"><strong data-translate="full_name_label">Nombre Completo:</strong>
                 <input type="text" id="nombre-completo" value="<?php echo htmlspecialchars($usuario['nombre_completo']); ?>" disabled>
             </label>
-            <label for="numero-cuenta"><strong>Número de Cuenta:</strong>
+            <label for="numero-cuenta"><strong data-translate="account_number_label">Número de Cuenta:</strong>
                 <input type="text" id="numero-cuenta" value="<?php echo htmlspecialchars($usuario['numero_cuenta']); ?>" disabled>
             </label>
-            <label for="dni"><strong>DNI:</strong>
+            <label for="dni"><strong data-translate="dni_label">DNI:</strong>
                 <input type="text" id="dni" value="<?php echo htmlspecialchars($usuario['dni']); ?>" disabled>
             </label>
-            <label for="correo-electronico"><strong>Correo Electrónico:</strong>
+            <label for="correo-electronico"><strong data-translate="email_label">Correo Electrónico:</strong>
                 <input type="email" id="correo-electronico" value="<?php echo htmlspecialchars($usuario['correo']); ?>" disabled>
             </label>
-            <label for="numero-telefono"><strong>Número de Teléfono:</strong>
+            <label for="numero-telefono"><strong data-translate="phone_number_label">Número de Teléfono:</strong>
                 <input type="text" id="numero-telefono" value="<?php echo htmlspecialchars($usuario['telefono']); ?>" class="editable" disabled>
             </label>
-            <label for="nombre-usuario"><strong>Nombre de Usuario:</strong>
+            <label for="nombre-usuario"><strong data-translate="username_label">Nombre de Usuario:</strong>
                 <input type="text" id="nombre-usuario" value="<?php echo htmlspecialchars($usuario['nombre_usuario']); ?>" class="editable" disabled>
             </label>
-            <label for="telefono-personal"><strong>Teléfono Personal:</strong>
+            <label for="telefono-personal"><strong data-translate="personal_phone_label">Teléfono Personal:</strong>
                 <input type="text" id="telefono-personal" value="<?php echo htmlspecialchars($usuario['telefono_personal']); ?>" class="editable" disabled>
             </label>
-            <label for="direccion"><strong>Dirección:</strong>
+            <label for="direccion"><strong data-translate="address_label">Dirección:</strong>
                 <input type="text" id="direccion" value="<?php echo htmlspecialchars($usuario['direccion']); ?>" class="editable" disabled>
             </label>
-            <button id="edit-button" class="boton-editar" onclick="toggleEditMode()">Editar Perfil</button>
-            <button id="save-button" class="boton-editar" onclick="validateAndSave()" style="display: none;">Guardar Cambios</button>
-            <button class="boton-volver">Volver</button>
+            <button id="edit-button" class="boton-editar" onclick="toggleEditMode()" data-translate="edit_button">Editar Perfil</button>
+            <button id="save-button" class="boton-editar" onclick="validateAndSave()" style="display: none;" data-translate="save_button">Guardar Cambios</button>
+            <button class="boton-volver" data-translate="back_button">Volver</button>
         </div>
 
         <div class="perfil-historial">
             <img src="imagenes/logpro.jpg" alt="Foto de usuario" class="perfil-avatar">
             <h2 id="historial-nombre"><?php echo htmlspecialchars($usuario['nombre_completo']); ?></h2>
-            <h3>Historial</h3>
-            <p id="libros-prestados">Libros prestados: <?php echo htmlspecialchars($usuario['libros_prestados']); ?></p>
-            <p id="multas">Multas: <?php echo htmlspecialchars($usuario['multas']); ?></p>
-            <p id="prestamos-activos">Préstamos activos: <?php echo htmlspecialchars($usuario['prestamos_activos']); ?></p>
-            <button class="boton-historial" onclick="window.location.href='historialUsuario.html'">Historial completo</button>
+            <h3 data-translate="history_title">Historial</h3>
+            <p id="libros-prestados" data-translate="borrowed_books_label">Libros prestados: <?php echo htmlspecialchars($usuario['libros_prestados']); ?></p>
+            <p id="multas" data-translate="fines_label">Multas: <?php echo htmlspecialchars($usuario['multas']); ?></p>
+            <p id="prestamos-activos" data-translate="active_loans_label">Préstamos activos: <?php echo htmlspecialchars($usuario['prestamos_activos']); ?></p>
+            <button class="boton-historial" onclick="window.location.href='historialUsuario.html'" data-translate="full_history_button">Historial completo</button>
         </div>
     </div>
     <script src="js/barra.js"></script>

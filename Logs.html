@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logs del Sistema</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-translate="page_title">Logs del Sistema</title>
 
-     <!-- Enlace del css propio de esta vista -->
-     <link rel="stylesheet" href="css/Perfiles.css">
+  <!-- Enlace del css propio de esta vista -->
+  <link rel="stylesheet" href="css/Perfiles.css">
 
-     <!--Iconos e Imagen de la pestaña logotipo-->
-     <script src="https://kit.fontawesome.com/fa2969f656.js" crossorigin="anonymous"></script>
-     <link rel="icon" href="./imagenes/imagen1.png" type="gif">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  <!-- Iconos e Imagen de la pestaña logotipo -->
+  <script src="https://kit.fontawesome.com/fa2969f656.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="./imagenes/imagen1.png" type="gif">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./registroLibros.js"></script>
-    <script src="./previa.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/styleb.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/idioma.js" defer></script>
 
 </head>
 <body>
@@ -40,45 +22,44 @@
    <div id="nav-container"></div> 
 
    <div class="Tittle-l">
-    <h1>Logs del Sistema</h1>
-</div>
+      <h1 data-translate="system_logs_title">Logs del Sistema</h1>
+   </div>
 
-    <div class="contenedor-l">
-    <i class="fa-solid fa-gears"></i>
-    <div class="Tittle">
-        <h1>Logs del Sistema</h1>
-    </div>
+   <div class="contenedor-l">
+      <i class="fa-solid fa-gears"></i>
+      <div class="Tittle">
+         <h1 data-translate="system_logs_title">Logs del Sistema</h1>
+      </div>
 
-       <div class="san-bar">
-        <input type="text" class="search-input" placeholder="Buscar...">
-        <button class="search-button">Buscar</button>
-       </div>
-    </div>
+      <div class="san-bar">
+         <input type="text" class="search-input" placeholder="Buscar..." data-translate="search_placeholder">
+         <button class="search-button" data-translate="search_button">Buscar</button>
+      </div>
+   </div>
 
-       <table>
-        <tr>
-            <th>Número</th>
-            <th>Acción</th>
-            <th>Fecha</th>
-            <th>Usuario</th>
-            <th>Detalle Acción</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Crear</td>
-            <td>2023-11-26</td>
-            <td>Juan Pérez</td>
-            <td>Nuevo proyecto</td>
-        </tr>
-        </table>
-    
-   
-     <a href="Administrador.html" class="volver-l">Volver</a><br>
-     <br>
+   <table>
+      <tr>
+         <th data-translate="log_number_column">Número</th>
+         <th data-translate="action_column">Acción</th>
+         <th data-translate="date_column">Fecha</th>
+         <th data-translate="user_column">Usuario</th>
+         <th data-translate="detail_column">Detalle Acción</th>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td>Crear</td>
+         <td>2023-11-26</td>
+         <td>Juan Pérez</td>
+         <td>Nuevo proyecto</td>
+      </tr>
+   </table>
 
-     <a href="menu.html" class="opcion-l">Opcion 1</a>
-     <a href="menu.html" class="opcion-l">Opcion 2</a>
-    
-     <script src="js/barra.js"></script>
+   <a href="Administrador.html" class="volver-l" data-translate="back_button">Volver</a><br>
+   <br>
+
+   <a href="menu.html" class="opcion-l" data-translate="option1">Opcion 1</a>
+   <a href="menu.html" class="opcion-l" data-translate="option2">Opcion 2</a>
+
+   <script src="js/barra.js"></script>
 </body>
 </html>

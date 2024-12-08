@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito</title>
+  <title data-translate="page_titlecarrito">Carrito</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -13,34 +14,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/idioma.js" defer></script>
 </head>
+
 <body>
   <!-- Barra de navegación -->
-  <div id ="nav-container"></div>
+  <div id="nav-container"></div>
 
   <!-- Contenido del carrito -->
   <div class="container mt-5">
     <div class="text-center cart-title">
       <h2 class="d-flex align-items-center justify-content-center">
         <img src="imagenes/carritocompras.jpg" alt="Ícono Carrito" style="width: 40px; height: auto; margin-right: 10px;">
-        Carrito de Préstamos
+        <span data-translate="cart_title">Carrito de Préstamos</span>
       </h2>
-      <p class="mt-2 text-secondary">Usuario: <strong>Nombre de Usuario</strong></p>
+      <p class="mt-2 text-secondary" data-translate="user_label">Usuario: <strong>Nombre de Usuario</strong></p>
     </div>
     <div class="text-center mt-4">
-      <p id="carrito-estado" class="badge badge-info">Estado: Pendiente</p>
+      <p id="carrito-estado" class="badge badge-info" data-translate="cart_status">Estado: Pendiente</p>
     </div>
     <div class="table-responsive mt-4">
       <table class="table table-striped" id="tabla-carrito">
         <thead>
           <tr>
-            <th>Código</th>
-            <th>Nombre del libro</th>
-            <th>Categoría</th>
-            <th>Autor</th>
-            <th>Ejemplar</th>
-            <th>Estado del libro</th>
-            <th>Acciones</th>
+            <th data-translate="code_column">Código</th>
+            <th data-translate="book_name_column">Nombre del libro</th>
+            <th data-translate="category_column">Categoría</th>
+            <th data-translate="author_column">Autor</th>
+            <th data-translate="edition_column">Ejemplar</th>
+            <th data-translate="book_status_column">Estado del libro</th>
+            <th data-translate="actions_column">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -52,7 +55,7 @@
             <td>1ra edición</td>
             <td>Bueno</td>
             <td>
-              <button class="btn btn-danger btn-sm eliminar-btn">Eliminar</button>
+              <button class="btn btn-danger btn-sm eliminar-btn" data-translate="delete_button">Eliminar</button>
             </td>
           </tr>
           <tr>
@@ -63,18 +66,18 @@
             <td>3ra edición</td>
             <td>Malo</td>
             <td>
-              <button class="btn btn-danger btn-sm eliminar-btn">Eliminar</button>
+              <button class="btn btn-danger btn-sm eliminar-btn" data-translate="delete_button">Eliminar</button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="text-right mt-3">
-      <p class="total-books">Total de libros a prestar: <span id="total-libros">2</span></p>
+      <p class="total-books" data-translate="total_books">Total de libros a prestar: <span id="total-libros">2</span></p>
     </div>
     <div class="text-center mt-4">
-      <button id="solicitar-btn" class="btn btn-primary">Solicitar</button>
-      <button id="cancelar-btn" class="btn btn-secondary">Cancelar</button>
+      <button id="solicitar-btn" class="btn btn-primary" data-translate="request_button">Solicitar</button>
+      <button id="cancelar-btn" class="btn btn-secondary" data-translate="cancel_button">Cancelar</button>
     </div>
   </div>
 
@@ -118,4 +121,5 @@
   </script>
   <script src="js/barra.js"></script>
 </body>
+
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión de Inventario</title>
+    <title data-translate="inventory_management_title">Gestión de Inventario</title>
     <link rel="stylesheet" href="./css/barranav.css">
     <link rel="stylesheet" href="./css/registroLibros.css" />
     <link rel="stylesheet" href="./css/Perfiles.css">
@@ -29,16 +29,12 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styleb.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/idioma.js" defer></script>
+
 </head>
 
 <body>
-    <div id="nav-container"></div> 
-    
+    <div id="nav-container"></div>
 
     <div class="container">
         <div class="info">
@@ -47,76 +43,35 @@
 
         <form class="form" method="POST" action="./controlador/ContRegistroLibro.php"
             onsubmit="return validateLibroForm()">
-            <h2>REGISTRO LIBROS</h2>
-            <p>El conocimiento jamas habia estado tan cerca.</p>
+            <h2 data-translate="register_books_title">REGISTRO LIBROS</h2>
+            <p data-translate="book_registration_info">El conocimiento jamas habia estado tan cerca.</p>
             <div class="inputs">
                 <input type="text" name="codigo" class="box" placeholder="Ingrese el codigo" required>
                 <input type="text" name="titulo" class="box" placeholder="Ingrese el titulo" required>
                 <input type="text" name="autor" class="box" placeholder="Ingrese el autor" required>
                 <input type="date" name="fechaPublicacion" class="box" placeholder="Año de publicacion" required>
                 <select name="miLista" id="miLista" class="box">
-                    <option value="valor1">Opción 1</option>
-                    <option value="valor2">Opción 2</option>
-                    <option value="valor3" selected>Elija su categoria </option>
+                    <option value="valor1" data-translate="option_1">Opción 1</option>
+                    <option value="valor2" data-translate="option_2">Opción 2</option>
+                    <option value="valor3" selected data-translate="choose_category">Elija su categoria</option>
                 </select>
                 <input type="text" name="cantidad" class="box" placeholder="Cantidad disponible" required>
                 <input type="text" name="estado" class="box" placeholder="Estado" required>
                 <input type="file" name="imagen" id="myFile" class="box" accept="image/*" required>
-                <script>
-                    const myFile = document.getElementById('myFile');
-
-                    myFile.addEventListener('change', (event) => {
-                        const file = event.target.files[0];
-
-                        if (file) {
-                            const fileType = file.type;
-                            const validImageTypes = ['image/png', 'image/jpeg', 'image/jpg'];
-
-                            if (!validImageTypes.includes(fileType)) {
-                                alert("Solo imagenes con formato .png, .jpg y .jpeg")
-                                myFile.value = ''; // Limpiar el input
-                            }
-                        }
-                    });
-                </script>
-                <div id="imagePreview"></div>
-
-                <script>
-                    const imageUpload = document.getElementById('myFile');
-                    const imagePreview = document.getElementById('imagePreview');
-
-                    imageUpload.addEventListener('change', () => {
-                        const file = imageUpload.files[0];
-                        if (file) {
-                            const reader = new FileReader();
-
-                            reader.onload = (e) => {
-                                imagePreview.innerHTML = `<img src="${e.target.result}" alt="Imagen Previsualización">`;
-                            };
-
-                            reader.readAsDataURL(file);
-                        } else {
-                            imagePreview.innerHTML = '';
-                        }
-                    });
-
-                </script>
-                <input type="submit" value="Ingresar" class="submit">
-
+                <input type="submit" value="Ingresar" class="submit" data-translate="submit_button">
             </div>
         </form>
     </div>
 
     <div class="contenedor">
         <form class="form1" method="POST" action="./controlador/ContCategoria.php">
-            <h2>REGISTRAR CATEGORÍAS</h2>
+            <h2 data-translate="register_category_title">REGISTRAR CATEGORÍAS</h2>
             <div class="inputs">
                 <input type="text" name="nombreCategoria" class="box1" placeholder="Ingrese la categoría" required>
-                <input type="submit" value="Crear" class="categoria">
+                <input type="submit" value="Crear" class="categoria" data-translate="create_button">
             </div>
         </form>
     </div>
-
 
 </body>
 <script src="js/barra.js"></script>

@@ -1,61 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Historial de Usuario</title>
+  <title data-translate="page_title">Historial de Usuario</title>
   <link rel="stylesheet" href="./css/historialUsuario.css">
   <link rel="icon" href="./imagenes/imagen1.png" type="gif">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="./registroLibros.js"></script>
-<script src="./previa.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./css/styleb.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <script src="js/idioma.js" defer></script>
 </head>
-
 
 <body>
  <div id="nav-container"></div> 
   <!-- Contenido de Historial de Usuario -->
   <div class="titulo">
-    <h1>Historial de Usuario</h1>
-    
-</div>
+    <h1 data-translate="history_title">Historial de Usuario</h1>
+  </div>
 
   <main>
-    
     <section class="tabla-historial">
       <!-- Tabla de Préstamos -->
       <div class="tabla-prestamos">
-        <h2>PRÉSTAMOS</h2>
+        <h2 data-translate="loans_title">PRÉSTAMOS</h2>
         <table>
           <thead>
             <tr>
-              <th>Libro</th>
-              <th>Fecha de Préstamo</th>
-              <th>Fecha de Devolución</th>
-              <th>Estado del Préstamo</th>
+              <th data-translate="book_column">Libro</th>
+              <th data-translate="loan_date_column">Fecha de Préstamo</th>
+              <th data-translate="return_date_column">Fecha de Devolución</th>
+              <th data-translate="loan_status_column">Estado del Préstamo</th>
             </tr>
           </thead>
           <tbody>
@@ -65,7 +40,6 @@
               <td>19/09/2024</td>
               <td>completado</td>
             </tr>
-            
             <tr>
               <td>1984</td>
               <td>12/09/2024</td>
@@ -84,14 +58,14 @@
 
       <!-- Tabla de Devoluciones -->
       <div class="tabla-devoluciones">
-        <h2>DEVOLUCIONES</h2>
+        <h2 data-translate="returns_title">DEVOLUCIONES</h2>
         <table>
           <thead>
             <tr>
-              <th>Libro</th>
-              <th>Fecha de Devolución</th>
-              <th>Estado</th>
-              <th>Multa Aplicada</th>
+              <th data-translate="book_column">Libro</th>
+              <th data-translate="return_date_column">Fecha de Devolución</th>
+              <th data-translate="status_column">Estado</th>
+              <th data-translate="fine_column">Multa Aplicada</th>
             </tr>
           </thead>
           <tbody>
@@ -119,13 +93,13 @@
 
       <!-- Tabla de Multas -->
       <div class="tabla-multas">
-        <h2>MULTAS</h2>
+        <h2 data-translate="fines_title">MULTAS</h2>
         <table>
           <thead>
             <tr>
-              <th>Motivo</th>
-              <th>Fecha</th>
-              <th>Monto</th>
+              <th data-translate="reason_column">Motivo</th>
+              <th data-translate="date_column">Fecha</th>
+              <th data-translate="amount_column">Monto</th>
             </tr>
           </thead>
           <tbody>
@@ -170,13 +144,13 @@
 
       <!-- Resumen -->
       <div class="resumen">
-        <h2>RESUMEN</h2>
-        <p>Total libros Prestados: 43</p>
-        <p>Libro Favorito: Programación para tontos, 8va edición.</p>
-        <p>Total Multas: 0</p>
+        <h2 data-translate="summary_title">RESUMEN</h2>
+        <p data-translate="total_books_label">Total libros Prestados: 43</p>
+        <p data-translate="favorite_book_label">Libro Favorito: Programación para tontos, 8va edición.</p>
+        <p data-translate="total_fines_label">Total Multas: 0</p>
       </div>
     </section>
-    <button onclick="window.location.href='perfilUsuario.html'">Volver</button>
+    <button onclick="window.location.href='perfilUsuario.html'" data-translate="back_button">Volver</button>
   </main>
 
   <script src="js/barra.js"></script>

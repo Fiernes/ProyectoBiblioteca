@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <title data-translate="page_title">Nosotros</title>
     <link rel="icon" href="../imagenes/Imagen1.png" type="gif">
     <link rel="stylesheet" href="./css/Nosotro.css">
     <link rel="stylesheet" href="./css/barranav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="./imagenes/imagen1.png" type="gif">
+    <script src="js/idioma.js" defer></script>
 </head>
 
 <body>
-
     <script>
         function redireccionar() {
             window.location.href = "Registro.html";
@@ -28,44 +27,37 @@
     </script>
     <nav>
         <img src="./imagenes/logo.png" alt="Logo Semillas" style="width: 70px; height: auto;">
-
-
-        <a href="index.html">Inicio</a>
-        <button onclick="redirecciona()" class="login-button">Login</button>
-        <button onclick="redireccionar()" class="login-registro">Registrate</button>
+        <a href="index.html" data-translate="home_link">Inicio</a>
+        <button onclick="redirecciona()" class="login-button" data-translate="login_button">Login</button>
+        <button onclick="redireccionar()" class="login-registro" data-translate="register_button">Registrate</button>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Sobre nosotros</h1>
+            <h1 data-translate="about_us_title">Sobre nosotros</h1>
         </div>
     </section>
 
-    <h2>Biblioteca Virtual</h2>
-    <p>Bienvenido a la biblioteca virtual. Es un espacio digital que alberga una vasta colección de recursos
+    <h2 data-translate="virtual_library_title">Biblioteca Virtual</h2>
+    <p data-translate="virtual_library_description">Bienvenido a la biblioteca virtual. Es un espacio digital que alberga una vasta colección de recursos
         informativos organizados y accesibles en línea. Gracias a esta plataforma podrás tener acceso a tus libros
         favoritos. Además, estas bibliotecas virtuales te ofrecen una serie de ventajas adicionales, como la posibilidad
         de realizar búsquedas personalizadas y crear tu perfil.</p>
-    </div>
-    <h2>Servicios</h2>
-    <p>Al tener acceso a tu biblioteca estudiantil podrás solicitar préstamos de los libros que necesites. ¡Descubre un
+
+    <h2 data-translate="services_title">Servicios</h2>
+    <p data-translate="services_description">Al tener acceso a tu biblioteca estudiantil podrás solicitar préstamos de los libros que necesites. ¡Descubre un
         mundo de conocimiento al alcance de un clic!</p>
-    </div>
-    </div>
 
-
+    <footer>
+        <div class="contaner">
+            <p data-translate="copyright">© 2024 SEMILLAS DEL SABER. Todos los derechos reservados.</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook" data-translate="facebook_icon"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter" data-translate="twitter_icon"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram" data-translate="instagram_icon"></i></a>
+        </div>
+    </footer>
 </body>
-
-<footer>
-    <div class="contaner">
-        <p>&copy; 2024 SEMILLAS DEL SABER. Todos los derechos reservados.</p>
-    </div>
-
-    <div class="social-media">
-        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-    </div>
-</footer>
 
 </html>
