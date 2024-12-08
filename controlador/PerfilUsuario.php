@@ -15,7 +15,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="css/PerfilUsuario.css">
+    <link rel="stylesheet" href="css/pUphp.css">
     <link rel="icon" href="./imagenes/imagen1.png" type="gif">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
