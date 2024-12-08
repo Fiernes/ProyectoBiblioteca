@@ -29,6 +29,9 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styleb.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         // Función para mostrar u ocultar contraseñas
         function togglePasswordVisibility() {
@@ -43,6 +46,30 @@
                 passwordField.type = 'password';
                 confirmPasswordField.type = 'password';
             }
+        }
+
+        // Función para validar las contraseñas
+        function validateForm() {
+            var password = document.getElementById('contraseña').value;
+            var confirmPassword = document.getElementById('confirmarContraseña').value;
+
+            // Verificar si las contraseñas coinciden
+            if (password !== confirmPassword) {
+                // Mostrar mensaje de error con SweetAlert2
+                Swal.fire({
+                    icon: 'error',
+                    title: '¡Error!',
+                    text: 'Las contraseñas no coinciden. Por favor, verifique.',
+                    confirmButtonText: 'Aceptar',
+                    background: '#f8d7da', // Color de fondo (rojo claro)
+                    iconColor: '#dc3545' // Color del ícono (rojo)
+                });
+
+                return false; // Impide el envío del formulario
+            }
+
+            // Si las contraseñas coinciden, permite el envío del formulario
+            return true;
         }
     </script>
 </head>
@@ -176,8 +203,6 @@
                             <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> 
                             <label for="showPassword">Mostrar Contraseñas</label>
                         </div>
-
-                        <div class="error text-danger text-center" id="error-message"></div>
 
                         <!-- Botones de Registrar y Cancelar -->
                         <div class="button-container">
