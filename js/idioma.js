@@ -1,6 +1,17 @@
 // Traducciones globales
 const translations = {
     es: {
+      mt: "Biblioteca",
+      ldst: "Logs del Sistema",
+      ht: "Historial de Usuario",
+      eykt:"Estadisticas y KPI",
+      Et: "Empleado",
+      ct: "Control de Prestamos",
+      cpt: "Carrito de prestamos",
+      pat: "Administrador",
+            pft: "Perfil de Usuario",
+      indext: "Semillas del saber",
+      page_titleaa: "Perfil de Usuario",
       login_title: "Iniciar Sesión",
       login_button: "Iniciar Sesión",
       register_link: "Regístrate",
@@ -74,7 +85,7 @@ const translations = {
     total_fines_label: "Total Multas: 0",
     back_button: "Volver",
     page_title: "Gestión de Inventario",
-    inventory_management_title: "Gestión de Inventario",
+    it: "Gestión de Inventario",
     inventory_title: "Inventario",
     search_placeholder: "Buscar...",
     search_button: "Buscar",
@@ -249,14 +260,34 @@ const translations = {
     option_1: "Opción 1",
     option_2: "Opción 2",
     cl: "Cambiar Idioma",
-    
+    nosot: "Sobre Nosotros",
+    pdct: "Panel de Control",
+    rgt: "Registro",
+    gut:"Gestión de Usuarios",
+    gdit: "Registro de Libros",
+    gdut: "Gestión de Empleado",
     },
     en: {
+      gdut: "User Employee",
+      gdit: "Register Books",
+      gut:"User Management",
+      rgt: "Register",
+      pdct: "Control Panel ",
+      nosot: "About Us",
+      mt: "Library",
+      ldst: "System Logs",
+      ht: "User History",
+      Et: "Employee",
+      ct: "Loan Control",
+      cpt: "Cart",
+      pat: "Admin Profile",
+      pft: "User Profile",
+      indexT: "Seeds of Knowledge",
+      page_titleaa: "Profile User",
       login_title: "login",
       login_button: "Sign In",
       register_link: "Register",
       no_Cu: "Don't have an account?",
-      page_title: "Seeds of Knowledge",
     about_link: "About",
     login_button: "Log In",
     register_button: "Sign Up",
@@ -270,7 +301,7 @@ const translations = {
     admin_title: "Administrator",
     control_panel: "Control Panel",
     manage_users: "User Management",
-    inventory_management: "Inventory Management",
+    it: "Inventory Management",
     system_logs: "System Logs",
     back_button: "Back",
     page_title: "Cart",
@@ -298,7 +329,7 @@ const translations = {
     control_panel: "Control Panel",
     inventory_management: "Inventory Management",
     back_button: "Back",
-    page_title: "Statistics and KPI",
+    eykt: "Statistics and KPI",
     stat1: "Statistic 1",
     stat2: "Statistic 2",
     stat3: "Statistic 3",
@@ -501,8 +532,7 @@ const translations = {
       }
     });
   
-    // Cambiar el título de la página también
-    document.title = translations[savedLanguage].login_title || document.title;
+    
   }
   
   // Ejecutar al cargar la página
