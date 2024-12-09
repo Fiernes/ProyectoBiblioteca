@@ -248,14 +248,11 @@ const translations = {
     back_button: "Volver",
     option_1: "Opción 1",
     option_2: "Opción 2",
+    cl: "Cambiar Idioma",
     
     },
     en: {
-<<<<<<< HEAD
-      login_title: "Penecito",
-=======
       login_title: "login",
->>>>>>> a7d8c243698ea6e9674a92337b1b7aff394cc7c7
       login_button: "Sign In",
       register_link: "Register",
       no_Cu: "Don't have an account?",
@@ -478,6 +475,8 @@ const translations = {
     back_button: "Back",
     option_1: "Option 1",
     option_2: "Option 2",
+    cl: "Change Language",
+
     }
   };
   
