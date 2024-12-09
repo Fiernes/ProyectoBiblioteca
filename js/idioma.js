@@ -248,6 +248,7 @@ const translations = {
     back_button: "Volver",
     option_1: "Opción 1",
     option_2: "Opción 2",
+    cl: "Cambiar Idioma",
     
     },
     en: {
@@ -474,6 +475,8 @@ const translations = {
     back_button: "Back",
     option_1: "Option 1",
     option_2: "Option 2",
+    cl: "Change Language",
+
     }
   };
   
